@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item android:title="Patinoire" />
-    <group >
-        <item android:title="Conseil" />
-        <item android:title="Tutoriel" />
-    </group>
-    <item android:title="Item" />
+    <item android:title="Conseils" >
+        <menu>
+            <item android:title="Tutoriel" />
+            <item android:title="Conseil" />
+        </menu>
+    </item>
+    <item android:title="Espace discussion" >
+        <menu >
+            <item android:title="Amis" />
+            <item android:title="Calendrier" />
+        </menu>
+    </item>
     <item android:title="Mini-Jeu" />
     <item android:title="Faire un match" />
 </menu>
