@@ -6,15 +6,20 @@
         <menu>
             <item android:title="Tutoriel"
                 android:id="@+id/id_tutoriel" />
-            <item android:title="Conseil" />
+            <item android:title="Conseil"
+                android:id="@+id/id_conseil" />
         </menu>
     </item>
     <item android:title="Espace discussion" >
         <menu >
-            <item android:title="Amis" />
-            <item android:title="Calendrier" />
+            <item android:title="Amis"
+                android:id="@+id/id_amis" />
+            <item android:title="Calendrier"
+                android:id="@+id/id_calendrier" />
         </menu>
     </item>
-    <item android:title="Mini-Jeu" />
-    <item android:title="Faire un match" />
+    <item android:title="Mini-Jeu"
+        android:id="@+id/id_jeu" />
+    <item android:title="Faire un match"
+        android:id="@+id/id_match" />
 </menu>
