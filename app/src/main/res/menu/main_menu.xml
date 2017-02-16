@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Patinoire" />
+    <group >
+        <item android:title="Conseil" />
+        <item android:title="Tutoriel" />
+    </group>
+    <item android:title="Item" />
+    <item android:title="Mini-Jeu" />
+    <item android:title="Faire un match" />
+</menu>
