@@ -6,13 +6,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class HomePage extends AppCompatActivity  {
+/**
+ * Created by Julien on 16/02/2017.
+ */
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
-    }
+public class MainMenu extends AppCompatActivity{
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
