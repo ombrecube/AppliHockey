@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:title="Patinoire"
-        android:id="@+id/id_patinoire" />
-    <item android:title="Conseils" >
+        android:id="@+id/id_patinoire"
+        android:checked="true"
+        android:icon="@android:drawable/ic_menu_mylocation" />
+    <item android:title="Conseils">
         <menu>
             <item android:title="Tutoriel"
                 android:id="@+id/id_tutoriel" />
@@ -10,7 +13,7 @@
                 android:id="@+id/id_conseil" />
         </menu>
     </item>
-    <item android:title="Espace discussion" >
+    <item android:title="Espace discussion">
         <menu >
             <item android:title="Amis"
                 android:id="@+id/id_amis" />
@@ -19,7 +22,8 @@
         </menu>
     </item>
     <item android:title="Mini-Jeu"
-        android:id="@+id/id_jeu" />
+        android:id="@+id/id_jeu"
+        android:icon="@android:drawable/ic_media_play" />
     <item android:title="Faire un match"
         android:id="@+id/id_match" />
 </menu>
