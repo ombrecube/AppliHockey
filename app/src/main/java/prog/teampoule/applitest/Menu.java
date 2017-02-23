@@ -71,7 +71,7 @@ public class Menu  extends AppCompatActivity implements NavigationView.OnNavigat
                 break;
             case R.id.id_match:
                 Toast.makeText(getApplicationContext(),"Match",Toast.LENGTH_SHORT).show();
-                myIntent = new Intent(getApplicationContext(), MatchAleatoire.class);
+                myIntent = new Intent(getApplicationContext(), activity_MatchAleatoire.class);
                 startActivity(myIntent);
                 break;
         }

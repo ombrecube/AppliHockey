@@ -8,7 +8,7 @@ import android.view.ViewStub;
  * Created by Julien on 23/02/2017.
  */
 
-public class MatchAleatoire extends Menu {
+public class activity_MatchAleatoire extends Menu {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
