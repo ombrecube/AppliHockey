@@ -47,9 +47,12 @@ public class Menu  extends AppCompatActivity implements NavigationView.OnNavigat
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
+        Intent myIntent;
         switch (id){
             case R.id.id_patinoire:
                 Toast.makeText(getApplicationContext(),"Patinoire",Toast.LENGTH_SHORT).show();
+                myIntent = new Intent(getApplicationContext(), activity_Patinoire.class);
+                startActivity(myIntent);
                 break;
             case R.id.id_conseil:
                 Toast.makeText(getApplicationContext(),"Conseil",Toast.LENGTH_SHORT).show();
@@ -68,10 +71,11 @@ public class Menu  extends AppCompatActivity implements NavigationView.OnNavigat
                 break;
             case R.id.id_match:
                 Toast.makeText(getApplicationContext(),"Match",Toast.LENGTH_SHORT).show();
-                Intent myIntent = new Intent(getApplicationContext(), MatchAleatoire.class);
-                startActivityForResult(myIntent, 0);
+                myIntent = new Intent(getApplicationContext(), MatchAleatoire.class);
+                startActivity(myIntent);
                 break;
         }
+        finish();
         return false;
     }
 }
