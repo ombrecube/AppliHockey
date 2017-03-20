@@ -24,6 +24,9 @@
         </activity>
         <activity android:name=".activity_MatchAleatoire"/>
         <activity android:name=".activity_Patinoire"/>
+        <activity android:name=".activity_Calendrier"/>
+        <activity android:name=".activity_Conseils"/>
+        <activity android:name=".activity_Default"/>
 
     </application>
 

@@ -13,7 +13,7 @@
             android:text="RECHERCHER"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView3"
+            android:id="@+id/TestPatinoire"
             android:textSize="30sp" />
 
         <ExpandableListView
