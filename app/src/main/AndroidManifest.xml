@@ -21,12 +21,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".activity_MatchAleatoire" />
         <activity android:name=".activity_Patinoire" />
         <activity
             android:name=".activity_Equipes"
             android:label="@string/title_activity__equipes"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+=======
+        <activity android:name=".activity_MatchAleatoire"/>
+        <activity android:name=".activity_Patinoire"/>
+        <activity android:name=".activity_Calendrier"/>
+        <activity android:name=".activity_Conseils"/>
+        <activity android:name=".activity_Default"/>
+
+>>>>>>> 9d437bdce41176415715a90448ae0f34a8f76937
     </application>
 
 </manifest>

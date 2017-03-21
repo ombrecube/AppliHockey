@@ -56,18 +56,28 @@ public class Menu  extends AppCompatActivity implements NavigationView.OnNavigat
                 break;
             case R.id.id_conseil:
                 Toast.makeText(getApplicationContext(),"Conseil",Toast.LENGTH_SHORT).show();
+                myIntent = new Intent(getApplicationContext(), activity_Conseils.class);
+                startActivity(myIntent);
                 break;
             case R.id.id_tutoriel:
                 Toast.makeText(getApplicationContext(),"Tutoriel",Toast.LENGTH_SHORT).show();
+                myIntent = new Intent(getApplicationContext(), activity_Default.class);
+                startActivity(myIntent);
                 break;
             case R.id.id_amis:
                 Toast.makeText(getApplicationContext(),"Amis",Toast.LENGTH_SHORT).show();
+                myIntent = new Intent(getApplicationContext(), activity_Default.class);
+                startActivity(myIntent);
                 break;
             case R.id.id_calendrier:
                 Toast.makeText(getApplicationContext(),"Calendrier",Toast.LENGTH_SHORT).show();
+                myIntent = new Intent(getApplicationContext(), activity_Calendrier.class);
+                startActivity(myIntent);
                 break;
             case R.id.id_jeu:
                 Toast.makeText(getApplicationContext(),"Jeu",Toast.LENGTH_SHORT).show();
+                myIntent = new Intent(getApplicationContext(), activity_Default.class);
+                startActivity(myIntent);
                 break;
             case R.id.id_match:
                 Toast.makeText(getApplicationContext(),"Match",Toast.LENGTH_SHORT).show();
