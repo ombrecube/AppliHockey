@@ -3,5 +3,6 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="mapKey">AIzaSyAzbulsSVSmI0rjnSttUgLgi9LsHci6SA4</string>
+    <string name="title_activity__equipes">activity_Equipes</string>
 
 </resources>
