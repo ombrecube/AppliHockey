@@ -76,7 +76,7 @@ public class Menu  extends AppCompatActivity implements NavigationView.OnNavigat
                 break;
             case R.id.id_jeu:
                 Toast.makeText(getApplicationContext(),"Jeu",Toast.LENGTH_SHORT).show();
-                myIntent = new Intent(getApplicationContext(), activity_Default.class);
+                myIntent = new Intent(getApplicationContext(), activity_MiniJeu.class);
                 startActivity(myIntent);
                 break;
             case R.id.id_match:

@@ -48,6 +48,7 @@ public class activity_MatchAleatoire extends Menu {
                 //lay.setOrientation(LinearLayout.VERTICAL);
                 LinearLayout.LayoutParams layoutParam = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
                 postLayout.addView(tx, layoutParam);
+                setContentView(postLayout);
 
                 //EditText input = (EditText) findViewById(R.id.editText3);
                 //String string = input.getText().toString();
