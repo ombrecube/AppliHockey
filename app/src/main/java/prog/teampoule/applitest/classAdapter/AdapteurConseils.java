@@ -1,7 +1,6 @@
 package prog.teampoule.applitest.classAdapter;
 
 import android.content.Context;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +9,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import prog.teampoule.applitest.R;
-import prog.teampoule.applitest.activity_Conseils_Item;
+import prog.teampoule.applitest.Activity.activity_Conseils_Item;
 
 /**
  * Created by Noemie on 22/03/2017.

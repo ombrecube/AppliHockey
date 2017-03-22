@@ -14,23 +14,23 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".HomePage">
+        <activity android:name=".Activity.activity_HomePage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity_MatchAleatoire" />
-        <activity android:name=".activity_Patinoire" />
+        <activity android:name=".Activity.activity_MatchAleatoire" />
+        <activity android:name=".Activity.activity_Patinoire" />
         <activity
-            android:name=".activity_Equipes"
+            android:name=".Activity.activity_Equipes"
             android:label="@string/title_activity__equipes"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".activity_Calendrier"/>
-        <activity android:name=".activity_Conseils"/>
-        <activity android:name=".activity_Default"/>
-        <activity android:name=".activity_MiniJeu"/>
+        <activity android:name=".Activity.activity_Calendrier"/>
+        <activity android:name=".Activity.activity_Conseils"/>
+        <activity android:name=".Activity.activity_Default"/>
+        <activity android:name=".Activity.activity_MiniJeu"/>
     </application>
 
 </manifest>

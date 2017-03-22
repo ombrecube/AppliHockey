@@ -14,8 +14,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
-import prog.teampoule.applitest.InputStreamOperations;
-import prog.teampoule.applitest.Menu;
+import prog.teampoule.applitest.Utilities.InputStreamOperations;
+import prog.teampoule.applitest.Utilities.Menu;
 import prog.teampoule.applitest.Patinoire;
 import prog.teampoule.applitest.R;
 

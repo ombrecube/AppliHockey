@@ -5,7 +5,6 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Display;
 import android.view.Surface;
 import android.view.View;
@@ -13,7 +12,7 @@ import android.view.ViewStub;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import prog.teampoule.applitest.Menu;
+import prog.teampoule.applitest.Utilities.Menu;
 import prog.teampoule.applitest.R;
 
 /**

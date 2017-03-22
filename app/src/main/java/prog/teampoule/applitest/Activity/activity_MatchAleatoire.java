@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewStub;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.ListView;
 import android.widget.Toast;
 
-import prog.teampoule.applitest.Menu;
+import java.util.ArrayList;
+
+import prog.teampoule.applitest.classAdapter.AdapteurJoueur;
+import prog.teampoule.applitest.Utilities.Menu;
 import prog.teampoule.applitest.R;
 
 /**
@@ -19,38 +21,25 @@ import prog.teampoule.applitest.R;
 public class activity_MatchAleatoire extends Menu {
 
     private Button b = null;
+    private ArrayList<String> listItem=  new ArrayList<String>();
+    private ListView listJoueur;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ViewStub stub = (ViewStub) findViewById(R.id.layout_stub);
         stub.setLayoutResource(R.layout.activity_match);
         View inflated = stub.inflate();
-
-
-
-        final Button button = (Button) findViewById(R.id.button8);
-        button.setOnClickListener(new View.OnClickListener() {
+        for (int i = 0; i < 4; i++) {
+            listItem.add(" ");
+        }
+        listJoueur = (ListView) findViewById(R.id.lv_joueur);
+        LoadListView();
+        Button btnAdd = (Button) findViewById(R.id.addJoueur);
+        btnAdd.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Plus", Toast.LENGTH_SHORT).show();
-
-
-                LinearLayout lay = (LinearLayout) findViewById(R.id.id_test);
-                LinearLayout postLayout = new LinearLayout(getApplicationContext());
-                TextView tx = new TextView(getApplicationContext());
-                tx.setText("ZZZZZZZZZZ");
-                //lay.setOrientation(LinearLayout.VERTICAL);
-                LinearLayout.LayoutParams layoutParam = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                postLayout.addView(tx, layoutParam);
-                setContentView(postLayout);
-
-                //EditText input = (EditText) findViewById(R.id.editText3);
-                //String string = input.getText().toString();
-                //Toast.makeText(getApplicationContext(), string, Toast.LENGTH_LONG).show();
-
-                //EditText tx = (EditText) findViewById(R.id.editText3);
-                //tx.setVisibility(View.VISIBLE);
-
-
+                Toast.makeText(getApplicationContext(), "Ajout d'un joueur", Toast.LENGTH_SHORT).show();
+                listItem.add(" ");
+                LoadListView();
             }
         });
 
@@ -67,6 +56,11 @@ public class activity_MatchAleatoire extends Menu {
 
 
 
+    }
+
+    private void LoadListView(){
+        AdapteurJoueur adpt = new AdapteurJoueur(this,listItem);
+        listJoueur.setAdapter(adpt);
     }
 
 

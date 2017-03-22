@@ -8,8 +8,9 @@ import android.widget.AdapterView;
 import android.content.Intent;
 import java.util.ArrayList;
 
-import prog.teampoule.applitest.Menu;
+import prog.teampoule.applitest.Utilities.Menu;
 import prog.teampoule.applitest.R;
+import prog.teampoule.applitest.classAdapter.AdapteurConseils;
 
 /**
  * Created by Julien on 20/03/2017.
@@ -28,8 +29,8 @@ public class activity_Conseils extends Menu {
 
         String[] valuesTitre = new String[]{"Patins", "Bâtons", "Protections"};
 
-        String[] valuesTitreContenuPatins = new String[]{"Choisir ses patins", "Entretenir"};
-        String[] valuesContenuPatins = new String[]{"Les pointures", "Les lames"};
+
+        String[] valuesContenuPatins = new String[]{"Les pointures", "Les lames"};String[] valuesTitreContenuPatins = new String[]{"Choisir ses patins", "Entretenir"};
 
         String[] valuesTitreContenuBatons = new String[]{"Choisir son bâton", "Entretenir"};
         String[] valuesContenuBatons = new String[]{"La hauteur", "Mettre du tape"};
@@ -40,7 +41,7 @@ public class activity_Conseils extends Menu {
         listItem.add(new activity_Conseils_Item(valuesTitre[1], valuesTitreContenuBatons, valuesContenuBatons));
 
         //normal pour l'instant
-        activity_Conseils_Adapter adapter = new activity_Conseils_Adapter(this, listItem);
+        AdapteurConseils adapter = new AdapteurConseils(this, listItem);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

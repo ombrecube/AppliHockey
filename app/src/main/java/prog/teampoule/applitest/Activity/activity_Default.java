@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewStub;
 
-import prog.teampoule.applitest.Menu;
+import prog.teampoule.applitest.Utilities.Menu;
 import prog.teampoule.applitest.R;
 
 /**
