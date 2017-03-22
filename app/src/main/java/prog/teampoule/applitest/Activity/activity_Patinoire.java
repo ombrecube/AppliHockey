@@ -1,4 +1,4 @@
-package prog.teampoule.applitest;
+package prog.teampoule.applitest.Activity;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +13,11 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+
+import prog.teampoule.applitest.InputStreamOperations;
+import prog.teampoule.applitest.Menu;
+import prog.teampoule.applitest.Patinoire;
+import prog.teampoule.applitest.R;
 
 /**
  * Created by Julien on 23/02/2017.

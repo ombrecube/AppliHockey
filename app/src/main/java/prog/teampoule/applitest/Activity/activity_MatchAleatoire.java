@@ -1,23 +1,16 @@
-package prog.teampoule.applitest;
+package prog.teampoule.applitest.Activity;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.text.InputType;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewStub;
-import android.view.View.OnTouchListener;
-import android.view.View.OnClickListener;
-import android.app.Activity;
-import android.os.Bundle;
-import android.view.MotionEvent;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import prog.teampoule.applitest.Menu;
+import prog.teampoule.applitest.R;
 
 /**
  * Created by Julien on 23/02/2017.

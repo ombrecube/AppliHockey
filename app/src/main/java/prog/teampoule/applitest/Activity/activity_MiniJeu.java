@@ -1,4 +1,4 @@
-package prog.teampoule.applitest;
+package prog.teampoule.applitest.Activity;
 
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -12,6 +12,9 @@ import android.view.View;
 import android.view.ViewStub;
 import android.view.WindowManager;
 import android.widget.TextView;
+
+import prog.teampoule.applitest.Menu;
+import prog.teampoule.applitest.R;
 
 /**
  * Created by Julien on 21/03/2017.

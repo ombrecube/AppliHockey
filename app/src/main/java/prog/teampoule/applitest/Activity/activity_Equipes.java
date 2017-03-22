@@ -1,9 +1,12 @@
-package prog.teampoule.applitest;
+package prog.teampoule.applitest.Activity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewStub;
 import android.widget.Button;
+
+import prog.teampoule.applitest.Menu;
+import prog.teampoule.applitest.R;
 
 /**
  * Created by Julien on 23/02/2017.
