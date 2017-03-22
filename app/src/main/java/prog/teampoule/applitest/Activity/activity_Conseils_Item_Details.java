@@ -1,11 +1,11 @@
-package prog.teampoule.applitest;
+package prog.teampoule.applitest.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import prog.teampoule.applitest.R;
 
 /**
  * Created by Noemie on 22/03/2017.

@@ -1,4 +1,4 @@
-package prog.teampoule.applitest;
+package prog.teampoule.applitest.classAdapter;
 
 import android.content.Context;
 import android.text.Layout;
@@ -9,13 +9,16 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import java.util.ArrayList;
 
+import prog.teampoule.applitest.R;
+import prog.teampoule.applitest.activity_Conseils_Item;
+
 /**
  * Created by Noemie on 22/03/2017.
  */
 
-public class activity_Conseils_Adapter extends ArrayAdapter<activity_Conseils_Item> {
+public class AdapteurConseils extends ArrayAdapter<activity_Conseils_Item> {
 
-    public activity_Conseils_Adapter(Context context, ArrayList<activity_Conseils_Item> arrayList){
+    public AdapteurConseils(Context context, ArrayList<activity_Conseils_Item> arrayList){
         super(context, 0, arrayList);
     }
 

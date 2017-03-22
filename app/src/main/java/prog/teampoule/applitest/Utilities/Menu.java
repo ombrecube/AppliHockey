@@ -1,4 +1,4 @@
-package prog.teampoule.applitest;
+package prog.teampoule.applitest.Utilities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import prog.teampoule.applitest.Activity.activity_Calendrier;
+import prog.teampoule.applitest.Activity.activity_Conseils;
+import prog.teampoule.applitest.Activity.activity_Default;
+import prog.teampoule.applitest.Activity.activity_MatchAleatoire;
+import prog.teampoule.applitest.Activity.activity_MiniJeu;
+import prog.teampoule.applitest.Activity.activity_Patinoire;
+import prog.teampoule.applitest.R;
 
 /**
  * Created by Julien on 23/02/2017.

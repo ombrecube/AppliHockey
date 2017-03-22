@@ -1,4 +1,4 @@
-package prog.teampoule.applitest;
+package prog.teampoule.applitest.Activity;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -73,7 +73,7 @@ public class activity_Conseils_Item implements Parcelable {
 
     private activity_Conseils_Item(Parcel in) {
         titre = in.readString();
-        titreContenu = in.readStringArray();
-        contenu = in.readStringArray();
+        /*titreContenu = in.readStringArray();
+        contenu = in.readStringArray();*/
     }
 }

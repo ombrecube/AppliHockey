@@ -1,4 +1,4 @@
-package prog.teampoule.applitest;
+package prog.teampoule.applitest.Utilities;
 
 import java.io.IOException;
 import java.io.InputStream;

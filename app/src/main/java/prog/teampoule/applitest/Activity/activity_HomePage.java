@@ -1,4 +1,4 @@
-package prog.teampoule.applitest;
+package prog.teampoule.applitest.Activity;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -14,7 +14,10 @@ import android.view.View;
 import android.view.ViewStub;
 import android.widget.Toast;
 
-public class HomePage extends Menu {
+import prog.teampoule.applitest.Menu;
+import prog.teampoule.applitest.R;
+
+public class activity_HomePage extends Menu {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
