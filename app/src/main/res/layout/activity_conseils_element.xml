@@ -4,15 +4,10 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:text="Conseils"
+        android:text="Element"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textTitleConseils"
-        android:textSize="30sp"
-        android:textAlignment="center" />
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/listViewConseils" />
+        android:id="@+id/titreElement"
+        android:textSize="24sp"
+        android:padding="10dp"/>
 </LinearLayout>
