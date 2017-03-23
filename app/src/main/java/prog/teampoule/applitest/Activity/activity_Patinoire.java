@@ -14,6 +14,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
+import prog.teampoule.applitest.Utilities.HttpRequestTaskManager;
 import prog.teampoule.applitest.Utilities.InputStreamOperations;
 import prog.teampoule.applitest.Utilities.Menu;
 import prog.teampoule.applitest.Patinoire;
@@ -24,6 +25,7 @@ import prog.teampoule.applitest.R;
  */
 
 public class activity_Patinoire extends Menu {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,47 +37,27 @@ public class activity_Patinoire extends Menu {
         test.setText(patinoires.toString());
     }
 
-/**
- * Récupère une liste de personnes.
- * @return ArrayList<Personne>: ou autre type de données.
- */
-public static ArrayList<Patinoire> getPersonnes(String myurl) {
+    /**
+     * Récupère une liste de personnes.
+     * @return ArrayList<Personne>: ou autre type de données.
+     */
+    public static ArrayList<Patinoire> getPersonnes(String myurl) {
 
-    ArrayList<Patinoire> patinoires = new ArrayList<Patinoire>();
-    Log.d("JSON","TEst");
-    try {
-        URL url = new URL(myurl);
-        Log.d("JSON","0");
-        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-        connection.connect();
-        Log.d("JSON","1");
-        InputStream inputStream = connection.getInputStream();
-        String result = InputStreamOperations.InputStreamToString(inputStream);
-        Log.d("JSON","2");
+        try {
 
-        // On récupère le JSON complet
-        JSONObject jsonObject = new JSONObject(result);
-        Log.d("JSON",jsonObject.toString());
-        // On récupère le tableau d'objets qui nous concernent
-        JSONArray array = new JSONArray(jsonObject);
-        // Pour tous les objets on récupère les infos
-        for (int i = 0; i < array.length(); i++) {
-            // On récupère un objet JSON du tableau
-            JSONObject obj = new JSONObject(array.getString(i));
-            // On fait le lien Personne - Objet JSON
-            Patinoire patinoire = new Patinoire();
-            patinoire.setName(obj.getString("name"));
-            patinoire.setText(obj.getString("text"));
-            // On ajoute la personne à la liste
-            patinoires.add(patinoire);
+            HttpRequestTaskManager http = new HttpRequestTaskManager();
+            http.setURL(myurl);
+            http.execute();
+            ArrayList<Patinoire> patinoires;
+            patinoires = http.getList();
+            // On récupère le JSON complet
+            return patinoires;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.d("Test", e.toString());
 
         }
-
-    } catch (Exception e) {
-        e.printStackTrace();
-        Log.d("Test",e.toString());
+        return null;
     }
-    // On retourne la liste des personnes
-    return patinoires;
-}
 }
