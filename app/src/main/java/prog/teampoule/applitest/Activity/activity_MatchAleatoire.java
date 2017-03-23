@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewStub;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -49,6 +50,18 @@ public class activity_MatchAleatoire extends Menu {
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Générer", Toast.LENGTH_SHORT).show();
                 final Intent myIntent = new Intent(getApplicationContext(), activity_Equipes.class);
+
+                ArrayList<String> listJou=  new ArrayList<String>();
+
+                for(int i=1; i < listItem.size()+1; i++)
+                {
+                    EditText ed = (EditText) findViewById(1000+i);
+                    String jou = ed.getText().toString();
+                    listJou.add(jou);
+
+                }
+                myIntent.putExtra("JOUEURS", listJou);
+
                 startActivity(myIntent);
             }
         });

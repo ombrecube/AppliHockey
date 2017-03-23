@@ -17,7 +17,6 @@ import prog.teampoule.applitest.R;
  */
 
 public class AdapteurJoueur extends ArrayAdapter<String> {
-private ArrayList<String> songs;
 
 
 public AdapteurJoueur(Context context, ArrayList<String> arrayList){
@@ -31,15 +30,15 @@ public View getView(int position, View convertView, ViewGroup parent){
         if(convertView==null){
         convertView = LayoutInflater.from(getContext()).inflate(R.layout.lv_joueur,parent,false);
         }
-        //get title and artist views
+
         TextView idJoueur = (TextView)convertView.findViewById(R.id.id_matchJoueur_alea);
         EditText nomJoueur = (EditText) convertView.findViewById(R.id.nom_joueur);
-        //get song using position
         String noms = getItem(position);
-        //get title and artist strings
+        position ++;
+        //nomJoueur.setId(1000+position);
         idJoueur.setText("Joueur "+position+": ");
         nomJoueur.setHint("Joueur "+position);
-        //set position as tag
+
         return convertView;
         }
 
