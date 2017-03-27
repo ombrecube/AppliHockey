@@ -29,6 +29,7 @@
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".Activity.activity_Calendrier"/>
         <activity android:name=".Activity.activity_Conseils"/>
+        <activity android:name=".Activity.activity_Conseils_Item_Details"/>
         <activity android:name=".Activity.activity_Default"/>
         <activity android:name=".Activity.activity_MiniJeu"/>
     </application>

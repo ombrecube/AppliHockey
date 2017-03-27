@@ -27,20 +27,14 @@ public class activity_Conseils extends Menu {
 
         ListView listView = (ListView) findViewById(R.id.listViewConseils);
 
-        String[] valuesTitre = new String[]{"Patins", "Bâtons", "Protections"};
+        String[] values = new String[]{"Patins", "Bâtons", "Protections"};
 
 
-        String[] valuesContenuPatins = new String[]{"Les pointures", "Les lames"};String[] valuesTitreContenuPatins = new String[]{"Choisir ses patins", "Entretenir"};
+        ArrayList<String> listItem = new ArrayList<String>();
+        for(int i = 0; i < values.length; i++) {
+            listItem.add(values[i]);
+        }
 
-        String[] valuesTitreContenuBatons = new String[]{"Choisir son bâton", "Entretenir"};
-        String[] valuesContenuBatons = new String[]{"La hauteur", "Mettre du tape"};
-
-
-        ArrayList<activity_Conseils_Item> listItem = new ArrayList<activity_Conseils_Item>();
-        listItem.add(new activity_Conseils_Item(valuesTitre[0], valuesTitreContenuPatins, valuesContenuPatins));
-        listItem.add(new activity_Conseils_Item(valuesTitre[1], valuesTitreContenuBatons, valuesContenuBatons));
-
-        //normal pour l'instant
         AdapteurConseils adapter = new AdapteurConseils(this, listItem);
         listView.setAdapter(adapter);
 
@@ -48,7 +42,7 @@ public class activity_Conseils extends Menu {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                activity_Conseils_Item item = (activity_Conseils_Item) parent.getItemAtPosition(position);
+                String item = (String) parent.getItemAtPosition(position);
                 Intent intent = new Intent(view.getContext(), activity_Conseils_Item_Details.class);
                 intent.putExtra("Item", item);
                 startActivity(intent);
