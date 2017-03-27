@@ -1,4 +1,4 @@
-package prog.teampoule.applitest;
+package prog.teampoule.applitest.classAdapter;
 
 /**
  * Created by Julien on 16/03/2017.

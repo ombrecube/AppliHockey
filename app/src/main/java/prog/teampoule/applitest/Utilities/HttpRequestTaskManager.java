@@ -3,23 +3,19 @@ package prog.teampoule.applitest.Utilities;
 import android.os.AsyncTask;
 import android.os.NetworkOnMainThreadException;
 import android.util.Log;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
-import prog.teampoule.applitest.Activity.activity_Patinoire;
-import prog.teampoule.applitest.Patinoire;
+import prog.teampoule.applitest.classAdapter.Patinoire;
 
 import static prog.teampoule.applitest.Utilities.InputStreamOperations.InputStreamToString;
 
