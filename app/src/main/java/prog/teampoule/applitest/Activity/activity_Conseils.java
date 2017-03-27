@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.content.Intent;
 import java.util.ArrayList;
 
+import prog.teampoule.applitest.BDD.MySQLiteHelper;
 import prog.teampoule.applitest.Utilities.Menu;
 import prog.teampoule.applitest.R;
 import prog.teampoule.applitest.classAdapter.AdapteurConseils;

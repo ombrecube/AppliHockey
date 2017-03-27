@@ -3,6 +3,7 @@ package prog.teampoule.applitest.Activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.telecom.Call;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -10,7 +11,12 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
+import prog.teampoule.applitest.BDD.ConseilsBDD;
+import prog.teampoule.applitest.BDD.DetailsConseils;
+import prog.teampoule.applitest.BDD.MySQLiteHelper;
 import prog.teampoule.applitest.R;
 
 /**
@@ -36,29 +42,23 @@ public class activity_Conseils_Item_Details extends Activity {
         TextView viewContenu2 = (TextView) findViewById(R.id.textContenu2);
         TextView viewContenu3 = (TextView) findViewById(R.id.textContenu3);
 
-        BufferedReader br = null;
-        FileReader fr = null;
+        MySQLiteHelper db = new MySQLiteHelper(getApplicationContext());
+        ConseilsBDD conseils = new ConseilsBDD(db);
+        List<DetailsConseils> listDetails = new ArrayList<DetailsConseils>();
+        listDetails = conseils.getAllDetailsConseils(1);
 
-        if(item.equals("Patins")) {
-            try {
-                fr = new FileReader("./patins.txt");
-                br = new BufferedReader(fr);
+        String nom_details = new String();
+        String contenu_details = new String();
 
-                String ligne = new String();
+        nom_details = listDetails.get(0).getNom_details();
+        contenu_details = listDetails.get(0).getContenu_details();
+        viewTitreContenu1.setText(nom_details);
+        viewContenu1.setText(contenu_details);
 
-                ligne = br.readLine();
-
-                viewTitreContenu1.setText(ligne);
-
-
-            } catch (FileNotFoundException e) {
-
-            } catch (IOException e) {
-
-            }
-
-
-        }
+        nom_details = listDetails.get(1).getNom_details();
+        contenu_details = listDetails.get(1).getContenu_details();
+        viewTitreContenu2.setText(nom_details);
+        viewContenu2.setText(contenu_details);
 
         //Toast.makeText(getApplicationContext(), "problème", Toast.LENGTH_LONG).show();
         //Log.d("salut", item.getTitre().toString());
