@@ -21,7 +21,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         Log.d("OncreateDB","Je suis la");
-        
+
         String ScriptDB=" ";
 
         // SQL statement to create Titre table
@@ -67,6 +67,14 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 "\tIl est aussi préférable de vous procurer des protège-lames, si ceux-ci ne sont pas fournis avec l'achat des patins.\n" +
                 "\tDe temps en temps, pensez à vérifier l'état de vos lacets et les vis de fixation des lames.\");";
         ScriptDB += " "+INSERT_DETAILS_TABLE_PATINS_2;
+
+        String INSERT_DETAILS_TABLE_PATINS_3 = "INSERT INTO DetailsConseils (id_titre, nom_details, contenu_details)"+
+                "VALUES (1, \"Affûtage des lames\", "+
+                "\"\tSi vos patins sont neufs, vous devez faire affuter les lames avant la première utitlisation.\n"+
+                "\tIl est assez difficile de déterminer la durée de vie d’un affûtage. "+
+                "Si vous sentez qu’une lame et/ou les deux lames ne mordent plus dans la glace lorsque vous poussez pour avancer, "+
+                "c’est le signe qu’un affûtage s’impose.\");";
+        ScriptDB += " "+INSERT_DETAILS_TABLE_PATINS_3;
 
         db.execSQL(ScriptDB);
     }
