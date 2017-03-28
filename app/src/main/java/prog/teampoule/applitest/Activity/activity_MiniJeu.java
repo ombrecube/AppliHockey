@@ -1,6 +1,7 @@
 package prog.teampoule.applitest.Activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,6 +14,8 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.Display;
 import android.view.Surface;
@@ -32,6 +35,12 @@ import prog.teampoule.applitest.R;
  */
 
 public class activity_MiniJeu extends Menu implements SensorEventListener {
+
+    public void onBackPressed() {
+        Intent myIntent = new Intent(getApplicationContext(), activity_HomePage.class);
+        startActivity(myIntent);
+        finish();
+        }
 
     private float xPos, xAccel, xVel = 0.0f;
     private float yPos, yAccel, yVel = 0.0f;
@@ -164,7 +173,7 @@ public class activity_MiniJeu extends Menu implements SensorEventListener {
                     }
                 }
             }else{
-                canvas.drawText();
+               // canvas.drawText();
                 // canvas.drawText("Jouez",xMax/2-20,yMax/2,new Paint(1));
             }
             invalidate();

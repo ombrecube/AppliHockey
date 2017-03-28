@@ -2,6 +2,7 @@ package prog.teampoule.applitest.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.telecom.Call;
 import android.util.Log;
@@ -41,8 +42,7 @@ public class activity_Conseils_Item_Details extends Activity {
         TextView viewContenu1 = (TextView) findViewById(R.id.textContenu1);
         TextView viewContenu2 = (TextView) findViewById(R.id.textContenu2);
         TextView viewContenu3 = (TextView) findViewById(R.id.textContenu3);
-
-        MySQLiteHelper db = new MySQLiteHelper(getApplicationContext());
+        MySQLiteHelper db = new MySQLiteHelper(this);
         ConseilsBDD conseils = new ConseilsBDD(db);
         List<DetailsConseils> listDetails = new ArrayList<DetailsConseils>();
         listDetails = conseils.getAllDetailsConseils(1);
@@ -62,6 +62,5 @@ public class activity_Conseils_Item_Details extends Activity {
 
         //Toast.makeText(getApplicationContext(), "problème", Toast.LENGTH_LONG).show();
         //Log.d("salut", item.getTitre().toString());
-
     }
 }

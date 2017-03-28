@@ -14,8 +14,8 @@ import java.util.List;
  */
 
 public class ConseilsBDD {
-    private static final String TABLE_TITRE = "TitreConseils";
-    private static final String TABLE_DETAILS = "DetailsConseils";
+    private static final String TABLE_TITRE = "titreconseils";
+    private static final String TABLE_DETAILS = "detailsconseils";
     private static final String KEY_ID_TITRE = "id_titre";
     private static final String KEY_NOM_TITRE = "nom_titre";
     private static final String KEY_ID_DETAILS = "id_details";
@@ -24,7 +24,7 @@ public class ConseilsBDD {
     private static final String[] COLUMNS_TITRE = {KEY_ID_TITRE, KEY_NOM_TITRE};
     private static final String[] COLUMNS_DETAILS = {KEY_ID_DETAILS, KEY_ID_TITRE, KEY_NOM_DETAILS, KEY_CONTENU_DETAILS};
     private MySQLiteHelper context;
-
+    private SQLiteDatabase bdd;
     public ConseilsBDD(MySQLiteHelper c) {
         context = c;
     }
@@ -59,8 +59,8 @@ public class ConseilsBDD {
     public List<DetailsConseils> getAllDetailsConseils(int id) {
         List<DetailsConseils> listDetails = new ArrayList<DetailsConseils>();
 
-        String query = "SELECT * FROM " + TABLE_DETAILS ;
-                //+ " WHERE id_titre = " + id + ";";
+        String query = "SELECT * FROM " + TABLE_DETAILS
+                + " WHERE id_titre = " + id + ";";
 
         SQLiteDatabase db = context.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
@@ -83,5 +83,15 @@ public class ConseilsBDD {
         Log.d("getAllDetails()", listDetails.toString());
 
         return listDetails;
+    }
+
+    public void open(){
+        //on ouvre la BDD en écriture
+        bdd = context.getWritableDatabase();
+    }
+
+    public void close(){
+        //on ferme l'accès à la BDD
+        bdd.close();
     }
 }
