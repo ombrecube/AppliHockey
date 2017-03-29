@@ -29,8 +29,9 @@ public AdapteurJoueur(Context context, ArrayList<String> arrayList){
 
 
 @Override
-public View getView(final int position, View convertView, ViewGroup parent){
+public View getView(int position, View convertView, ViewGroup parent){
         final int nb = position;
+
         if(convertView==null){
         convertView = LayoutInflater.from(getContext()).inflate(R.layout.lv_joueur,parent,false);
         }
@@ -38,13 +39,14 @@ public View getView(final int position, View convertView, ViewGroup parent){
         TextView idJoueur = (TextView)convertView.findViewById(R.id.id_matchJoueur_alea);
         EditText nomJoueur = (EditText) convertView.findViewById(R.id.nom_joueur);
 
+
         if(myItems.get(nb) != "")
             nomJoueur.setText(myItems.get(nb).toString());
-
+        position ++;
         idJoueur.setText("Joueur "+position+": ");
         nomJoueur.setHint("Joueur "+position);
 
-        //we need to update adapter once we finish with editing
+
         nomJoueur.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             public void onFocusChange(View v, boolean hasFocus) {
                 if (!hasFocus){
@@ -58,4 +60,10 @@ public View getView(final int position, View convertView, ViewGroup parent){
         return convertView;
         }
 
+    public ArrayList<String> ListeJoueurs()
+    {
+        return myItems;
+    }
+
 }
+

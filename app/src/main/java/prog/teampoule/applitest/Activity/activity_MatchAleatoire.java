@@ -21,6 +21,7 @@ import prog.teampoule.applitest.R;
 
 public class activity_MatchAleatoire extends Menu {
 
+    private ArrayList<String> listJou=  new ArrayList<String>();
     private Button b = null;
     private ArrayList<String> listItem=  new ArrayList<String>();
     private ListView listJoueur;
@@ -45,22 +46,15 @@ public class activity_MatchAleatoire extends Menu {
         });
 
         final Button button2 = (Button) findViewById(R.id.button7);
-        //Intent myIntent;
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Générer", Toast.LENGTH_SHORT).show();
                 final Intent myIntent = new Intent(getApplicationContext(), activity_Equipes.class);
 
-                ArrayList<String> listJou=  new ArrayList<String>();
 
-                for(int i=1; i < listItem.size()+1; i++)
-                {
-                    EditText ed = (EditText) findViewById(1000+i);
-                    String jou = ed.getText().toString();
-                    listJou.add(jou);
-
-                }
+                int nb = listJou.size();
                 myIntent.putExtra("JOUEURS", listJou);
+                myIntent.putExtra("NB", nb);
 
                 startActivity(myIntent);
             }
@@ -74,6 +68,7 @@ public class activity_MatchAleatoire extends Menu {
     private void LoadListView(){
         AdapteurJoueur adpt = new AdapteurJoueur(this,listItem);
         listJoueur.setAdapter(adpt);
+        listJou = adpt.ListeJoueurs();
     }
 
 
