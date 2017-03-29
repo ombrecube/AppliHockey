@@ -9,15 +9,14 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import prog.teampoule.applitest.R;
-import prog.teampoule.applitest.Activity.activity_Conseils_Item;
 
 /**
  * Created by Noemie on 22/03/2017.
  */
 
-public class AdapteurConseils extends ArrayAdapter<activity_Conseils_Item> {
+public class AdapteurConseils extends ArrayAdapter<String> {
 
-    public AdapteurConseils(Context context, ArrayList<activity_Conseils_Item> arrayList){
+    public AdapteurConseils(Context context, ArrayList<String> arrayList){
         super(context, 0, arrayList);
     }
 
@@ -30,8 +29,8 @@ public class AdapteurConseils extends ArrayAdapter<activity_Conseils_Item> {
 
         TextView viewTitre = (TextView) convertView.findViewById(R.id.titreElement);
 
-        activity_Conseils_Item item = getItem(position);
-        viewTitre.setText(item.getTitre());
+        String item = getItem(position);
+        viewTitre.setText(item);
 
         return convertView;
     }

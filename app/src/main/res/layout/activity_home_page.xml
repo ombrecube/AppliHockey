@@ -26,7 +26,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="268dp"
-            app:srcCompat="@drawable/ic_logohome"
+            app:srcCompat="@drawable/patinage"
             android:id="@+id/imageView2" />
 
         <LinearLayout
@@ -38,7 +38,7 @@
                 android:text="Button"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/button2"
+                android:id="@+id/btn_patinoire"
                 android:layout_weight="1" />
 
             <Button

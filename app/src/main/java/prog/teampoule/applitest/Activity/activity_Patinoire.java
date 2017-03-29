@@ -6,18 +6,11 @@ import android.view.View;
 import android.view.ViewStub;
 import android.widget.TextView;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 
 import prog.teampoule.applitest.Utilities.HttpRequestTaskManager;
-import prog.teampoule.applitest.Utilities.InputStreamOperations;
 import prog.teampoule.applitest.Utilities.Menu;
-import prog.teampoule.applitest.Patinoire;
+import prog.teampoule.applitest.classAdapter.Patinoire;
 import prog.teampoule.applitest.R;
 
 /**
