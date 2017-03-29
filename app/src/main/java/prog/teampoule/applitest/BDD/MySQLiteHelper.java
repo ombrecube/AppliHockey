@@ -3,6 +3,7 @@ package prog.teampoule.applitest.BDD;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.media.ExifInterface;
 import android.util.Log;
 
 /**
@@ -79,12 +80,33 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 "c’est le signe qu’un affûtage s’impose.\")";
         ScriptDB += " "+INSERT_DETAILS_TABLE_PATINS_3;
 
+        String INSERT_DETAILS_TABLE_BATONS_1 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details)"+
+                "VALUES (2, \"Choisir correctement\", "+
+                "\"\tDans un premier temps, vous devez déterminer s'il vous faut un bâton de gaucher ou droitier. "+
+                "Lorsque vous empoignez le bâton, si vous êtes plus à l'aise avec votre main droite en haut du bâton, "+
+                "il vous faut un bâton de gaucher. Si vous êtes plus à l'aise avec votre main gauche, il vous faut un bâton de droitier.\n"+
+                "\tPour choisir la bonne longueur du bâton, placez-le sur le plancher devant vous. " +
+                "Si vous portez des chaussures, le bâton devrait vous arriver entre le nez et le menton, " +
+                "de sorte que lorque vous porterez vos patins, il vous arrivera légèrement en-dessous du menton.\")";
+        ScriptDB += " "+INSERT_DETAILS_TABLE_BATONS_1;
+
+        String INSERT_DETAILS_TABLE_BATONS_2 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details)"+
+                "VALUES (2, \"Appliquer du tape (ruban) sur son bâton\", "+
+                "\"\tAppliquer du tape sur votre bâton de hockey vous donnera une meilleure prise, "+
+                "plus de contrôle sur la rondelle et vous permettra de prolonger sa durée de vie.\n"+
+                "\tSi vous le souhaitez, vous pouvez créer un pommeau avec le tape au bout de votre bâton pour empêcher votre main de glisser. "+
+                "Ensuite, pour avoir une meilleure prise, enroulez le tape sur une distance de quatre à six pouces (10-15cm) à partir de l'extrémité du bâton.\n" +
+                "\tAppliquez le tape sur la lame, du talon au bout, ou du bout au talon, selon votre préférence. " +
+                "Recouvrez le tape déjà appliqué soigneusement et de façon constante.\")";
+
         db.execSQL(CREATE_TITRE_TABLE);
         db.execSQL(CREATE_DETAILS_TABLE);
-       // db.execSQL(INSERT_TITRE_TABLE);
+        db.execSQL(INSERT_TITRE_TABLE);
         db.execSQL(INSERT_DETAILS_TABLE_PATINS_1);
         db.execSQL(INSERT_DETAILS_TABLE_PATINS_2);
         db.execSQL(INSERT_DETAILS_TABLE_PATINS_3);
+        db.execSQL(INSERT_DETAILS_TABLE_BATONS_1);
+        db.execSQL(INSERT_DETAILS_TABLE_BATONS_2);
     }
 
     @Override
