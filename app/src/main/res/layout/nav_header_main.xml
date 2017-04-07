@@ -33,4 +33,11 @@
         android:layout_height="wrap_content"
         android:text="Bienvenue jeune patin'heure" />
 
+    <TextView
+        android:text="Vous n'etes pas connecté"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_Menuconnection"
+        android:textStyle="normal|italic" />
+
 </LinearLayout>

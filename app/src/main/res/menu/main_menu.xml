@@ -20,12 +20,15 @@
     <item android:title="Conseils">
         <menu>
             <item android:title="Tutoriel"
-                android:id="@+id/id_tutoriel" />
+                android:id="@+id/id_tutoriel"
+                android:icon="@android:drawable/ic_menu_help" />
             <item android:title="Conseil"
-                android:id="@+id/id_conseil" />
+                android:id="@+id/id_conseil"
+                android:icon="@android:drawable/ic_menu_info_details" />
         </menu>
     </item>
-    <item android:title="Espace discussion">
+    <item android:title="Espace discussion"
+        android:visible="false">
         <menu >
             <item android:title="Amis"
                 android:id="@+id/id_amis" />
