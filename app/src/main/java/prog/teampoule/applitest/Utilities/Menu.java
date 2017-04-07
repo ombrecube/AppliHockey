@@ -92,6 +92,10 @@ public class Menu  extends AppCompatActivity implements NavigationView.OnNavigat
                 myIntent = new Intent(getApplicationContext(), activity_MatchAleatoire.class);
                 startActivity(myIntent);
                 break;
+            default:
+                myIntent = new Intent(getApplicationContext(), activity_Default.class);
+                startActivity(myIntent);
+                break;
         }
         finish();
         return false;

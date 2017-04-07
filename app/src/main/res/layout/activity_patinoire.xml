@@ -10,15 +10,17 @@
         android:weightSum="0.3">
 
         <TextView
-            android:text="RECHERCHER"
+            android:text="Chargemennt ..."
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TestPatinoire"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:id="@+id/id_chargementPatinoire" />
 
-        <ExpandableListView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
     </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ListViewPatinoire" />
 
 </LinearLayout>
