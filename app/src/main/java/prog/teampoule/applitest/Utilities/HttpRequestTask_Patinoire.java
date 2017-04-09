@@ -139,10 +139,5 @@ public class HttpRequestTask_Patinoire extends AsyncTask<Patinoire, String, JSON
         }
     }
 
-    private static String convertStreamToString(InputStream is) {
-        java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
-        return s.hasNext() ? s.next() : "";
-    }
-
 }
 

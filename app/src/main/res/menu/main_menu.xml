@@ -28,7 +28,9 @@
         </menu>
     </item>
     <item android:title="Espace discussion"
-        android:visible="false">
+        android:visible="false"
+        android:id="@+id/Menu_itemAmis"
+        android:menuCategory="alternative">
         <menu >
             <item android:title="Amis"
                 android:id="@+id/id_amis" />

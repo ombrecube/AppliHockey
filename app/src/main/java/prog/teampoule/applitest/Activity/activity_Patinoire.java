@@ -36,19 +36,6 @@ public class activity_Patinoire extends Menu {
 
     }
 
-    private void Login(String myurl) {
-        //Login("https://patinou-rest-api-ombrecube.c9users.io/user/login");
-        try {
-            HttpRequestTask_User http = new HttpRequestTask_User();
-            http.setURL(myurl);
-            http.setFLAG(1);
-            http.execute();
-        }catch(Exception e) {
-            e.printStackTrace();
-            Log.d("Test", e.toString());
-        }
-    }
-
     /**
      * Récupère une liste de personnes.
      * @return ArrayList<Personne>: ou autre type de données.
