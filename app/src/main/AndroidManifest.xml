@@ -33,6 +33,9 @@
         <activity android:name=".Activity.activity_Default"/>
         <activity android:name=".Activity.activity_MiniJeu"/>
         <activity android:name=".Activity.activity_login"/>
+        <activity android:name=".Activity.activity_Friend"/>
+        <activity android:name=".Activity.activity_Allmessages"/>
+        <activity android:name=".Activity.activity_Message"/>
     </application>
 
 </manifest>

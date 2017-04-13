@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.NetworkOnMainThreadException;
+import android.support.design.widget.NavigationView;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
@@ -26,6 +27,7 @@ import java.util.ArrayList;
 
 import prog.teampoule.applitest.Activity.activity_Conseils;
 import prog.teampoule.applitest.Activity.activity_HomePage;
+import prog.teampoule.applitest.R;
 import prog.teampoule.applitest.classAdapter.User;
 
 import static android.content.Context.MODE_PRIVATE;
@@ -83,10 +85,13 @@ public class HttpRequestTask_User extends AsyncTask<User, String, JSONObject> {
         this.ins = ins;
     }
 
-    private User user;
-    public User getUser() {
-        return user;
+    private NavigationView navigationView ;
+
+    public void setNavigationView(NavigationView navigationView) {
+        this.navigationView = navigationView;
     }
+
+    private User user;
     public void setUser(User user) {
         this.user = user;
     }
@@ -183,6 +188,7 @@ public class HttpRequestTask_User extends AsyncTask<User, String, JSONObject> {
                                 nom.setText(user.getString("nom"));
                             if(user.getString("prenom") != "null")
                                 prenom.setText(user.getString("prenom"));
+                            navigationView.getMenu().findItem(R.id.Menu_itemAmis).setVisible(true);
                             Toast.makeText(context,"Heureux de vous voir "+user.getString("login"),Toast.LENGTH_LONG).show();//*/
                             break;
                         case 2:

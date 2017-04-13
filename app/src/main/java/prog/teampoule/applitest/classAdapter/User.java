@@ -17,6 +17,10 @@ public class User {
         this.mdp = mdp;
     }
 
+    public User(){
+
+    }
+
     public User(String login, String mdp) {
         this.login = login;
         this.mdp = mdp;

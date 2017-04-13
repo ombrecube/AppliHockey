@@ -13,12 +13,14 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 
+import prog.teampoule.applitest.Activity.activity_Allmessages;
 import prog.teampoule.applitest.Activity.activity_Calendrier;
 import prog.teampoule.applitest.Activity.activity_Conseils;
 import prog.teampoule.applitest.Activity.activity_Default;
 import prog.teampoule.applitest.Activity.activity_MatchAleatoire;
 import prog.teampoule.applitest.Activity.activity_MiniJeu;
 import prog.teampoule.applitest.Activity.activity_Patinoire;
+import prog.teampoule.applitest.Activity.activity_Friend;
 import prog.teampoule.applitest.Activity.activity_login;
 import prog.teampoule.applitest.R;
 
@@ -30,6 +32,7 @@ public class Menu  extends AppCompatActivity implements NavigationView.OnNavigat
 
 
     public boolean is_Connected = false;
+    public NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,17 +46,18 @@ public class Menu  extends AppCompatActivity implements NavigationView.OnNavigat
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        MenuItem item = (MenuItem) findViewById(R.id.Menu_itemAmis);
         CreateIs_connected();
         if(is_Connected){
             Log.d("Connected","Reussie");
-            //item.setVisible(false);
+            navigationView.getMenu().findItem(R.id.Menu_itemAmis).setVisible(true);
+        }else{
+            navigationView.getMenu().findItem(R.id.Menu_itemAmis).setVisible(false);
         }
     }
 
-    private void CreateIs_connected() {
+    protected void CreateIs_connected() {
         SharedPreferences prefs = getSharedPreferences("MYPREF", MODE_PRIVATE);
         if(!prefs.getBoolean("is_Connected",false)){
             SharedPreferences.Editor editor = getSharedPreferences("MYPREF", MODE_PRIVATE).edit();
@@ -93,7 +97,7 @@ public class Menu  extends AppCompatActivity implements NavigationView.OnNavigat
                 startActivity(myIntent);
                 break;
             case R.id.id_amis:
-                myIntent = new Intent(getApplicationContext(), activity_Default.class);
+                myIntent = new Intent(getApplicationContext(), activity_Friend.class);
                 startActivity(myIntent);
                 break;
             case R.id.id_calendrier:
@@ -110,6 +114,10 @@ public class Menu  extends AppCompatActivity implements NavigationView.OnNavigat
                 break;
             case R.id.id_profil:
                 myIntent = new Intent(getApplicationContext(), activity_login.class);
+                startActivity(myIntent);
+                break;
+            case R.id.id_message:
+                myIntent = new Intent(getApplicationContext(), activity_Allmessages.class);
                 startActivity(myIntent);
                 break;
             default:

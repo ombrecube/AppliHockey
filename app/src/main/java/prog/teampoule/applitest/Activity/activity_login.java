@@ -32,6 +32,7 @@ public class activity_login extends Menu{
     private TextView nom;
     private TextView login;
     private TextView prenom ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,6 +106,7 @@ public class activity_login extends Menu{
                 login.setText("Qui etes vous?????");
                 nom.setText("Inconnue");
                 prenom.setText("Inconnue");
+                navigationView.getMenu().findItem(R.id.Menu_itemAmis).setVisible(false);
             }
         });
 
@@ -158,6 +160,7 @@ public class activity_login extends Menu{
             http.setLog(logins);
             http.setPro(profil);
             http.setIns(inscription);
+            http.setNavigationView(navigationView);
             http.setLogin(login);
             http.setNom(nom);
             http.setPrenom(prenom);
