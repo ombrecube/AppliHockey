@@ -45,12 +45,12 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 "ADD CONSTRAINT fk_id_titre FOREIGN KEY (id_titre) REFERENCES titreconseils(id_titre)";
         ScriptDB += ALTER_TABLE_FOREIGN_KEY_ID_DETAILS;
 
-        String INSERT_TITRE_TABLE = "INSERT INTO titreconseils (nom_titre) VALUES (\"Patins\")"+
-                "INSERT INTO titreconseils (nom_titre) VALUES (\"Bâtons\")"+
-                "INSERT INTO titreconseils (nom_titre) VALUES (\"Protections\")";
+        String INSERT_TITRE_TABLE = "INSERT INTO titreconseils (nom_titre) VALUES (\"Patins\");"+
+                "INSERT INTO titreconseils (nom_titre) VALUES (\"Bâtons\");"+
+                "INSERT INTO titreconseils (nom_titre) VALUES (\"Protections\");";
         ScriptDB += INSERT_TITRE_TABLE;
 
-        String INSERT_DETAILS_TABLE_PATINS_1 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details)"+
+        String INSERT_DETAILS_TABLE_PATINS_1 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details) "+
                 "VALUES (1, \"Choisir correctement\", "+
                 "\"\tPour la pointure appropriée, pensez à vous renseigner (sur internet ou auprès d'un vendeur), "+
                 "ce n'est pas la même pointure que pour vos chaussures. "+
@@ -61,7 +61,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 "Vérifiez quand même que les patins d'occasions ne soient pas en trop mauvais état.\")";
         ScriptDB += INSERT_DETAILS_TABLE_PATINS_1;
 
-        String INSERT_DETAILS_TABLE_PATINS_2 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details)"+
+        String INSERT_DETAILS_TABLE_PATINS_2 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details) "+
                 "VALUES (1, \"Entretien des patins\", "+
                 "\"\tAprès chaque utilisation, pensez à bien sécher vos patins (et lames) avec une serviette ou un chiffon.\n" +
                 "\tLorsque vous n’êtes plus sur la glace, il est vivement conseillé de retirer ses patins. " +
@@ -72,7 +72,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
         Log.d("test",ScriptDB);
 
-        String INSERT_DETAILS_TABLE_PATINS_3 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details)"+
+        String INSERT_DETAILS_TABLE_PATINS_3 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details) "+
                 "VALUES (1, \"Affûtage des lames\", "+
                 "\"\tSi vos patins sont neufs, vous devez faire affuter les lames avant la première utitlisation.\n"+
                 "\tIl est assez difficile de déterminer la durée de vie d’un affûtage. "+
@@ -80,7 +80,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 "c’est le signe qu’un affûtage s’impose.\")";
         ScriptDB += " "+INSERT_DETAILS_TABLE_PATINS_3;
 
-        String INSERT_DETAILS_TABLE_BATONS_1 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details)"+
+        String INSERT_DETAILS_TABLE_BATONS_1 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details) "+
                 "VALUES (2, \"Choisir correctement\", "+
                 "\"\tDans un premier temps, vous devez déterminer s'il vous faut un bâton de gaucher ou droitier. "+
                 "Lorsque vous empoignez le bâton, si vous êtes plus à l'aise avec votre main droite en haut du bâton, "+
@@ -90,7 +90,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 "de sorte que lorque vous porterez vos patins, il vous arrivera légèrement en-dessous du menton.\")";
         ScriptDB += " "+INSERT_DETAILS_TABLE_BATONS_1;
 
-        String INSERT_DETAILS_TABLE_BATONS_2 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details)"+
+        String INSERT_DETAILS_TABLE_BATONS_2 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details) "+
                 "VALUES (2, \"Appliquer du tape (ruban) sur son bâton\", "+
                 "\"\tAppliquer du tape sur votre bâton de hockey vous donnera une meilleure prise, "+
                 "plus de contrôle sur la rondelle et vous permettra de prolonger sa durée de vie.\n"+
