@@ -5,25 +5,49 @@ package prog.teampoule.applitest.classAdapter;
  */
 
 public class Patinoire {
-    //Classe De test de connection
-    String name;
-    String text;
+    private int id_patinoire;
+    private String nom;
+    private String adresse;
+    private String cp;
+    private String telephone;
 
-    public String getText() {
-        return text;
+    public String getNom() {
+        return nom;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
-    public String getName() {
-        return name;
+    public String getTelephone() {
+        return telephone;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 
+    public String getCp() {
+        return cp;
+    }
 
+    public void setCp(String cp) {
+        this.cp = cp;
+    }
+
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
+
+    public int getId_patinoire() {
+        return id_patinoire;
+    }
+
+    public void setId_patinoire(int id_patinoire) {
+        this.id_patinoire = id_patinoire;
+    }
 }

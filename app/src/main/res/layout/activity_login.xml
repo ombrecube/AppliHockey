@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LinearLayoutLogin"
+        android:visibility="visible">
+
+        <TextView
+            android:text="Login :"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/edtxt_Login"
+            android:textAlignment="center"
+            android:hint='"Votre login"' />
+
+        <TextView
+            android:text="Mot de passe:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textAlignment="center" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/edtxt_Mdp"
+            android:textAlignment="center"
+            android:hint="•••••••" />
+
+        <Button
+            android:text="Se conneceter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_Connection"
+            android:textAlignment="center" />
+
+        <TextView
+            android:text="Pas encore inscrit :"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <Button
+            android:text="S'inscrire"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_Inscription" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LinearLayoutInscription"
+        android:visibility="invisible">
+
+        <TextView
+            android:text="Crée un compte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:text="Login *:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textAlignment="center" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/edtxt_loginInscription"
+            android:hint='"Un login"'
+            android:textAlignment="center" />
+
+        <TextView
+            android:text="Nom:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textAlignment="center" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/edtxt_nom"
+            android:hint='"Votre nom"'
+            android:textAlignment="center"
+            android:text="" />
+
+        <TextView
+            android:text="Prenom:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/edtxt_prenom"
+            android:hint='"Votre prenom"'
+            android:textAlignment="center"
+            android:text="" />
+
+        <TextView
+            android:text="Mot de passe *:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textAlignment="center" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/edtxt_mdpInscription"
+            android:hint="••••••••"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:text="" />
+
+        <Button
+            android:text="Devenir un patin'heure!"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_inscrit" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/LinearLayoutProfil"
+        android:visibility="invisible">
+
+        <TextView
+            android:text="Mon profil :"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:text="Mon login:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Admin?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_login" />
+
+        <TextView
+            android:text="Mon nom:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Inconnue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_nom" />
+
+        <TextView
+            android:text="Mon prenom:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Inconnue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_prenom" />
+
+        <Button
+            android:text="Se deconnecter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_deconnection" />
+    </LinearLayout>
+
+</RelativeLayout>

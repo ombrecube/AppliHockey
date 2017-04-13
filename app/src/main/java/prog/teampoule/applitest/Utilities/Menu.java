@@ -1,6 +1,7 @@
 package prog.teampoule.applitest.Utilities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -9,8 +10,8 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import prog.teampoule.applitest.Activity.activity_Calendrier;
 import prog.teampoule.applitest.Activity.activity_Conseils;
@@ -18,6 +19,7 @@ import prog.teampoule.applitest.Activity.activity_Default;
 import prog.teampoule.applitest.Activity.activity_MatchAleatoire;
 import prog.teampoule.applitest.Activity.activity_MiniJeu;
 import prog.teampoule.applitest.Activity.activity_Patinoire;
+import prog.teampoule.applitest.Activity.activity_login;
 import prog.teampoule.applitest.R;
 
 /**
@@ -25,6 +27,9 @@ import prog.teampoule.applitest.R;
  */
 
 public class Menu  extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    public boolean is_Connected = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +45,24 @@ public class Menu  extends AppCompatActivity implements NavigationView.OnNavigat
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        MenuItem item = (MenuItem) findViewById(R.id.Menu_itemAmis);
+        CreateIs_connected();
+        if(is_Connected){
+            Log.d("Connected","Reussie");
+            //item.setVisible(false);
+        }
+    }
+
+    private void CreateIs_connected() {
+        SharedPreferences prefs = getSharedPreferences("MYPREF", MODE_PRIVATE);
+        if(!prefs.getBoolean("is_Connected",false)){
+            SharedPreferences.Editor editor = getSharedPreferences("MYPREF", MODE_PRIVATE).edit();
+            editor.putBoolean("is_Connected", false);
+            editor.commit();
+            is_Connected = false;
+        }else{
+            is_Connected = true;
+        }
     }
 
     @Override
@@ -58,38 +81,39 @@ public class Menu  extends AppCompatActivity implements NavigationView.OnNavigat
         Intent myIntent;
         switch (id){
             case R.id.id_patinoire:
-                Toast.makeText(getApplicationContext(),"Patinoire",Toast.LENGTH_SHORT).show();
                 myIntent = new Intent(getApplicationContext(), activity_Patinoire.class);
                 startActivity(myIntent);
                 break;
             case R.id.id_conseil:
-                Toast.makeText(getApplicationContext(),"Conseil",Toast.LENGTH_SHORT).show();
                 myIntent = new Intent(getApplicationContext(), activity_Conseils.class);
                 startActivity(myIntent);
                 break;
             case R.id.id_tutoriel:
-                Toast.makeText(getApplicationContext(),"Tutoriel",Toast.LENGTH_SHORT).show();
                 myIntent = new Intent(getApplicationContext(), activity_Default.class);
                 startActivity(myIntent);
                 break;
             case R.id.id_amis:
-                Toast.makeText(getApplicationContext(),"Amis",Toast.LENGTH_SHORT).show();
                 myIntent = new Intent(getApplicationContext(), activity_Default.class);
                 startActivity(myIntent);
                 break;
             case R.id.id_calendrier:
-                Toast.makeText(getApplicationContext(),"Calendrier",Toast.LENGTH_SHORT).show();
                 myIntent = new Intent(getApplicationContext(), activity_Calendrier.class);
                 startActivity(myIntent);
                 break;
             case R.id.id_jeu:
-                Toast.makeText(getApplicationContext(),"Jeu",Toast.LENGTH_SHORT).show();
                 myIntent = new Intent(getApplicationContext(), activity_MiniJeu.class);
                 startActivity(myIntent);
                 break;
             case R.id.id_match:
-                Toast.makeText(getApplicationContext(),"Match",Toast.LENGTH_SHORT).show();
                 myIntent = new Intent(getApplicationContext(), activity_MatchAleatoire.class);
+                startActivity(myIntent);
+                break;
+            case R.id.id_profil:
+                myIntent = new Intent(getApplicationContext(), activity_login.class);
+                startActivity(myIntent);
+                break;
+            default:
+                myIntent = new Intent(getApplicationContext(), activity_Default.class);
                 startActivity(myIntent);
                 break;
         }

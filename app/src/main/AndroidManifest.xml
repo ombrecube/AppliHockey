@@ -32,6 +32,7 @@
         <activity android:name=".Activity.activity_Conseils_Item_Details"/>
         <activity android:name=".Activity.activity_Default"/>
         <activity android:name=".Activity.activity_MiniJeu"/>
+        <activity android:name=".Activity.activity_login"/>
     </application>
 
 </manifest>
