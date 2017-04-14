@@ -59,10 +59,11 @@ public class ConseilsBDD {
     public List<DetailsConseils> getAllDetailsConseils(int id) {
         List<DetailsConseils> listDetails = new ArrayList<DetailsConseils>();
 
+        SQLiteDatabase db = context.getWritableDatabase();
+
         String query = "SELECT * FROM " + TABLE_DETAILS
                 + " WHERE id_titre = " + id + ";";
 
-        SQLiteDatabase db = context.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
 
         DetailsConseils detailsConseils = null;
