@@ -119,6 +119,9 @@ public class HttpRequestTask_Patinoire extends AsyncTask<Patinoire, String, JSON
                     patinoire.setAdresse(obj.getString("adresse"));
                     patinoire.setCp(obj.getString("cp"));
                     patinoire.setTelephone(obj.getString("telephone"));
+                    //if(obj.getString("latidude").equals(null))
+                    //    patinoire.setLatitude(obj.getDouble("latitude"));
+                    //patinoire.setLongitude(obj.getDouble("longitude"));
                     // On ajoute la personne à la liste
                     patinoires.add(patinoire);
                 }
