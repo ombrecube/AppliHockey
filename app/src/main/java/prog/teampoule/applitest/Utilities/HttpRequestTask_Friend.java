@@ -32,6 +32,8 @@ import prog.teampoule.applitest.classAdapter.Message;
 import prog.teampoule.applitest.classAdapter.User;
 
 import static android.content.Context.MODE_PRIVATE;
+import static prog.teampoule.applitest.Activity.activity_Friend.lv;
+import static prog.teampoule.applitest.Activity.activity_Friend.lv2;
 import static prog.teampoule.applitest.Utilities.InputStreamOperations.InputStreamToString;
 
 /**
@@ -143,8 +145,19 @@ public class HttpRequestTask_Friend extends AsyncTask<User, String, JSONObject> 
                                 user.setLogin(friend.getString("login"));
                                 List.add(user);
                             }
-                            AdapteurUser adpt = new AdapteurUser(context,List);
-                            list.setAdapter(adpt);
+                            adapteur = new AdapteurUser(context,List);
+                            adapteur.notifyDataSetChanged();
+                            lv.setAdapter(adapteur);
+                            ArrayList<User> Friends = new ArrayList<User>();
+                            JSONArray Friend = new JSONArray(Json.getString("RequestFriend"));
+                            for (int i = 0; i < Friend.length(); i++) {
+                                JSONObject friend = new JSONObject(Friend.get(i).toString());
+                                User user = new User();
+                                user.setId_user(friend.getInt("id_user"));
+                                user.setLogin(friend.getString("login"));
+                                Friends.add(user);
+                            }
+                            lv2.setAdapter(new AdapteurUser(context,Friends));
                             break;
                         case 2:
                             ArrayList<Conversation> Conversations = new ArrayList<Conversation>();
@@ -202,5 +215,9 @@ public class HttpRequestTask_Friend extends AsyncTask<User, String, JSONObject> 
         }  catch (NetworkOnMainThreadException e){
             Log.e("ThreadException", "android > 3.0!!");
         }
+    }
+    private AdapteurUser adapteur;
+    public void setAdapteur(AdapteurUser adapteur) {
+        this.adapteur = adapteur;
     }
 }

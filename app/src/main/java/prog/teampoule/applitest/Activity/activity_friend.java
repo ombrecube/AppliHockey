@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
+import android.support.design.widget.TabLayout.OnTabSelectedListener;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -23,6 +24,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import prog.teampoule.applitest.R;
 import prog.teampoule.applitest.Utilities.HttpRequestTask_Friend;
@@ -38,10 +40,9 @@ public class activity_Friend extends Menu{
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
-
-    private ListFragment Amis = new ListFragment();
-    private ListFragment requestedAmis = new ListFragment();
-    private ListFragment Search = new ListFragment();
+    public static ListView lv ;
+    public static ListView lv2;
+    public static AdapteurUser adapter;
 
 
     @Override
@@ -58,11 +59,11 @@ public class activity_Friend extends Menu{
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         if(is_Connected){
-            Log.d("Connected","Reussie");
             navigationView.getMenu().findItem(R.id.Menu_itemAmis).setVisible(true);
         }else{
             navigationView.getMenu().findItem(R.id.Menu_itemAmis).setVisible(false);
         }
+
 
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
@@ -70,12 +71,12 @@ public class activity_Friend extends Menu{
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-
+        lv = new ListView(getApplicationContext());
+        lv2 = new ListView(getApplicationContext());
+        adapter = new AdapteurUser(getApplicationContext(),new ArrayList<User>());
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
-
-
-        //GetFriend();
+        GetFriend();
     }
 
     public void GetFriend() {
@@ -86,7 +87,8 @@ public class activity_Friend extends Menu{
         http.setURL(myurl);
         http.setContext(getApplicationContext());
         http.setFLAG(1);
-       // http.setListView();
+        http.setListView(lv);
+        http.setAdapteur(adapter);
         http.execute();
     }
 
@@ -99,13 +101,13 @@ public class activity_Friend extends Menu{
         }
 
         @Override
-        public ListFragment getItem(int position) {
+        public Fragment getItem(int position) {
             if (position == 0){
-                return Amis;
+                return ListHolderFragment.newInstance(position);
             }else if (position == 1){
-                return requestedAmis;
+                return ListHolderFragment.newInstance(position);
             }else{
-                return Search;
+                return ListHolderFragment.newInstance(position);
             }
         }
 
@@ -128,24 +130,13 @@ public class activity_Friend extends Menu{
             return null;
         }
     }
+    public static class ListHolderFragment extends Fragment {
+        private static String ARG_SECTION_NUMBER;
 
-    public static class PlaceholderFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private static final String ARG_SECTION_NUMBER = "section_number";
-        public ListView list;
+        public  ListHolderFragment(){}
 
-        public PlaceholderFragment() {
-        }
-
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
-        public static PlaceholderFragment newInstance(int sectionNumber) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
+        public static ListHolderFragment newInstance(int sectionNumber) {
+            ListHolderFragment fragment = new ListHolderFragment();
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             fragment.setArguments(args);
@@ -155,9 +146,24 @@ public class activity_Friend extends Menu{
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            ListView list_all = (ListView) rootView.findViewById(R.id.lv_friend);
-            return rootView;
+            View rootView;
+            Log.d("SectionNumner",String.valueOf(ARG_SECTION_NUMBER));
+            if (getArguments().getInt(ARG_SECTION_NUMBER) == 0) {
+                rootView = inflater.inflate(R.layout.fragment_main, container, false);
+                lv = (ListView) rootView.findViewById(R.id.lv_Amis);
+                TextView textView = (TextView) rootView.findViewById(R.id.textView7);
+                textView.setText("Mes Amis");
+            }else if(getArguments().getInt(ARG_SECTION_NUMBER) == 1) {
+                rootView = inflater.inflate(R.layout.fragment_main, container, false);
+                lv2 = (ListView) rootView.findViewById(R.id.lv_Amis);
+                TextView textView = (TextView) rootView.findViewById(R.id.textView7);
+                textView.setText("Demander amis");
+            }else{
+                rootView = inflater.inflate(R.layout.fragmentlist , container, false);
+                lv2 = (ListView) rootView.findViewById(R.id.lv_Requested);
+            }
+
+          return rootView;
         }
     }
 }

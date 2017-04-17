@@ -21,6 +21,10 @@ public class User {
 
     }
 
+    public User(String login){
+        this.login=login;
+    }
+
     public User(String login, String mdp) {
         this.login = login;
         this.mdp = mdp;
