@@ -55,7 +55,9 @@ public class activity_Message extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 EditText txt = (EditText) findViewById(R.id.Edtxt_message);
+
                 setMessage(ID,txt.getText().toString());
+                txt.setText(" ");
             }
         });
 

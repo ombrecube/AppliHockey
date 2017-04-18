@@ -75,7 +75,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
         String INSERT_DETAILS_TABLE_PATINS_3 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details) "+
                 "VALUES (1, \"Affûtage des lames\", "+
-                "\"\t\tSi vos patins sont neufs, vous devez faire affuter les lames avant la première utilisation.\n"+
+                "\"\t\tSi vos patins sont neufs, vous devez faire affuter  aaaaaaa les lames avant la première utilisation.\n"+
                 "\t\tIl est assez difficile de déterminer la durée de vie d’un affûtage. "+
                 "Si vous sentez qu’une lame et/ou les deux lames ne mordent plus dans la glace lorsque vous poussez pour avancer "+
                 "c’est le signe qu’un affûtage s’impose.\")";
@@ -98,7 +98,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 "\t\tSi vous le souhaitez, vous pouvez créer un pommeau avec le tape au bout de votre bâton pour empêcher votre main de glisser. "+
                 "Ensuite, pour avoir une meilleure prise, enroulez le tape sur une distance de quatre à six pouces (10-15cm) à partir de l'extrémité du bâton.\n" +
                 "\t\tAppliquez le tape sur la lame, du talon au bout, ou du bout au talon, selon votre préférence. " +
-                "Recouvrez le tape déjà appliqué soigneusement et de façon constante.\")";
+                "Recouvrez le tape déjà appliqué soigneusement et de façon constante aaaa.\")";
 
         db.execSQL(CREATE_TITRE_TABLE);
         db.execSQL(CREATE_DETAILS_TABLE);

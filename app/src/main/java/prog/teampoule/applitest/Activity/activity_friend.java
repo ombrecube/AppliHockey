@@ -64,7 +64,6 @@ public class activity_Friend extends Menu{
             navigationView.getMenu().findItem(R.id.Menu_itemAmis).setVisible(false);
         }
 
-
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
