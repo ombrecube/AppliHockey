@@ -26,6 +26,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
         db.execSQL("DROP TABLE IF EXISTS detailsconseils");
         db.execSQL("DROP TABLE IF EXISTS titreconseils");
+        db.execSQL("DROP TABLE IF EXISTS evenements");
 
         // SQL statement to create Titre table
         String CREATE_TITRE_TABLE = "CREATE TABLE titreconseils ( " +
@@ -41,6 +42,12 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 "contenu_details TEXT ) ";
         ScriptDB += CREATE_DETAILS_TABLE;
 
+        String CREATE_EVENEMENTS_TABLE = "CREATE TABLE evenements ( " +
+                "id_evenement INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "nom_evenement TEXT ," +
+                "date_evenement TEXT );";
+        ScriptDB += CREATE_EVENEMENTS_TABLE;
+
         // create all the tables
         String ALTER_TABLE_FOREIGN_KEY_ID_DETAILS = "ALTER TABLE detailsconseils " +
                 "ADD CONSTRAINT fk_id_titre FOREIGN KEY (id_titre) REFERENCES titreconseils(id_titre)";
@@ -50,6 +57,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 "INSERT INTO titreconseils (nom_titre) VALUES (\"Bâtons\");"+
                 "INSERT INTO titreconseils (nom_titre) VALUES (\"Protections\");";
         ScriptDB += INSERT_TITRE_TABLE;
+
+        String INSERT_EVENT = "INSERT INTO evenements (nom_evenement, date_evenement) VALUES (\"Test event bdd\", \"1492315200000\");";
 
         String INSERT_DETAILS_TABLE_PATINS_1 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details) "+
                 "VALUES (1, \"Choisir correctement\", "+
@@ -102,12 +111,15 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
         db.execSQL(CREATE_TITRE_TABLE);
         db.execSQL(CREATE_DETAILS_TABLE);
+        db.execSQL(CREATE_EVENEMENTS_TABLE);
         db.execSQL(INSERT_TITRE_TABLE);
         db.execSQL(INSERT_DETAILS_TABLE_PATINS_1);
         db.execSQL(INSERT_DETAILS_TABLE_PATINS_2);
         db.execSQL(INSERT_DETAILS_TABLE_PATINS_3);
         db.execSQL(INSERT_DETAILS_TABLE_BATONS_1);
         db.execSQL(INSERT_DETAILS_TABLE_BATONS_2);
+        db.execSQL(INSERT_EVENT);
+
     }
 
     @Override

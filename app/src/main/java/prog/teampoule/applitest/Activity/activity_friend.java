@@ -34,7 +34,7 @@ import prog.teampoule.applitest.classAdapter.User;
  * Created by Julien on 09/04/2017.
  */
 
-public class activity_Friend extends Menu{
+public class activity_friend extends Menu{
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;

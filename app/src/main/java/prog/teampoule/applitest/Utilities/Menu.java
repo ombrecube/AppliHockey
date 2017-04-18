@@ -20,7 +20,7 @@ import prog.teampoule.applitest.Activity.activity_Default;
 import prog.teampoule.applitest.Activity.activity_MatchAleatoire;
 import prog.teampoule.applitest.Activity.activity_MiniJeu;
 import prog.teampoule.applitest.Activity.activity_Patinoire;
-import prog.teampoule.applitest.Activity.activity_Friend;
+import prog.teampoule.applitest.Activity.activity_friend;
 import prog.teampoule.applitest.Activity.activity_login;
 import prog.teampoule.applitest.R;
 
@@ -97,7 +97,7 @@ public class Menu  extends AppCompatActivity implements NavigationView.OnNavigat
                 startActivity(myIntent);
                 break;
             case R.id.id_amis:
-                myIntent = new Intent(getApplicationContext(), activity_Friend.class);
+                myIntent = new Intent(getApplicationContext(), activity_friend.class);
                 startActivity(myIntent);
                 break;
             case R.id.id_calendrier:
