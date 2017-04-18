@@ -41,9 +41,19 @@ public class activity_Conseils_Item_Details extends Activity {
         TextView viewTitreContenu1 = (TextView) findViewById(R.id.titreContenu1);
         TextView viewTitreContenu2 = (TextView) findViewById(R.id.titreContenu2);
         TextView viewTitreContenu3 = (TextView) findViewById(R.id.titreContenu3);
+        TextView viewTitreContenu4 = (TextView) findViewById(R.id.titreContenu4);
+        TextView viewTitreContenu5 = (TextView) findViewById(R.id.titreContenu5);
+        TextView viewTitreContenu6 = (TextView) findViewById(R.id.titreContenu6);
+        TextView viewTitreContenu7 = (TextView) findViewById(R.id.titreContenu7);
+        TextView viewTitreContenu8 = (TextView) findViewById(R.id.titreContenu8);
         final TextView viewContenu1 = (TextView) findViewById(R.id.textContenu1);
         final TextView viewContenu2 = (TextView) findViewById(R.id.textContenu2);
         final TextView viewContenu3 = (TextView) findViewById(R.id.textContenu3);
+        final TextView viewContenu4 = (TextView) findViewById(R.id.textContenu4);
+        final TextView viewContenu5 = (TextView) findViewById(R.id.textContenu5);
+        final TextView viewContenu6 = (TextView) findViewById(R.id.textContenu6);
+        final TextView viewContenu7 = (TextView) findViewById(R.id.textContenu7);
+        final TextView viewContenu8 = (TextView) findViewById(R.id.textContenu8);
 
         MySQLiteHelper db = new MySQLiteHelper(this);
         ConseilsBDD conseils = new ConseilsBDD(db);
@@ -123,6 +133,111 @@ public class activity_Conseils_Item_Details extends Activity {
         } else {
             viewTitreContenu3.setText("");
             viewContenu3.setText("");
+        }
+
+        if (listDetails.size() > 3) {
+            nom_details = listDetails.get(3).getNom_details();
+            contenu_details = listDetails.get(3).getContenu_details();
+            viewTitreContenu4.setText(nom_details);
+            viewContenu4.setText(contenu_details);
+
+            viewTitreContenu4.setOnClickListener(new OnClickListener() {
+                public void onClick(View view) {
+                    if (viewContenu4.getVisibility() == view.GONE) {
+                        viewContenu4.setVisibility(view.VISIBLE);
+                    } else {
+                        viewContenu4.setVisibility(view.GONE);
+                    }
+                }
+            });
+
+        } else {
+            viewTitreContenu4.setText("");
+            viewContenu4.setText("");
+        }
+
+        if (listDetails.size() > 4) {
+            nom_details = listDetails.get(4).getNom_details();
+            contenu_details = listDetails.get(4).getContenu_details();
+            viewTitreContenu5.setText(nom_details);
+            viewContenu5.setText(contenu_details);
+
+            viewTitreContenu5.setOnClickListener(new OnClickListener() {
+                public void onClick(View view) {
+                    if (viewContenu5.getVisibility() == view.GONE) {
+                        viewContenu5.setVisibility(view.VISIBLE);
+                    } else {
+                        viewContenu5.setVisibility(view.GONE);
+                    }
+                }
+            });
+
+        } else {
+            viewTitreContenu5.setText("");
+            viewContenu5.setText("");
+        }
+
+        if (listDetails.size() > 5) {
+            nom_details = listDetails.get(5).getNom_details();
+            contenu_details = listDetails.get(5).getContenu_details();
+            viewTitreContenu6.setText(nom_details);
+            viewContenu6.setText(contenu_details);
+
+            viewTitreContenu6.setOnClickListener(new OnClickListener() {
+                public void onClick(View view) {
+                    if (viewContenu6.getVisibility() == view.GONE) {
+                        viewContenu6.setVisibility(view.VISIBLE);
+                    } else {
+                        viewContenu6.setVisibility(view.GONE);
+                    }
+                }
+            });
+
+        } else {
+            viewTitreContenu6.setText("");
+            viewContenu6.setText("");
+        }
+
+        if (listDetails.size() > 6) {
+            nom_details = listDetails.get(6).getNom_details();
+            contenu_details = listDetails.get(6).getContenu_details();
+            viewTitreContenu7.setText(nom_details);
+            viewContenu7.setText(contenu_details);
+
+            viewTitreContenu3.setOnClickListener(new OnClickListener() {
+                public void onClick(View view) {
+                    if (viewContenu7.getVisibility() == view.GONE) {
+                        viewContenu7.setVisibility(view.VISIBLE);
+                    } else {
+                        viewContenu7.setVisibility(view.GONE);
+                    }
+                }
+            });
+
+        } else {
+            viewTitreContenu7.setText("");
+            viewContenu7.setText("");
+        }
+
+        if (listDetails.size() > 7) {
+            nom_details = listDetails.get(7).getNom_details();
+            contenu_details = listDetails.get(7).getContenu_details();
+            viewTitreContenu8.setText(nom_details);
+            viewContenu8.setText(contenu_details);
+
+            viewTitreContenu8.setOnClickListener(new OnClickListener() {
+                public void onClick(View view) {
+                    if (viewContenu8.getVisibility() == view.GONE) {
+                        viewContenu8.setVisibility(view.VISIBLE);
+                    } else {
+                        viewContenu8.setVisibility(view.GONE);
+                    }
+                }
+            });
+
+        } else {
+            viewTitreContenu8.setText("");
+            viewContenu8.setText("");
         }
 
 
