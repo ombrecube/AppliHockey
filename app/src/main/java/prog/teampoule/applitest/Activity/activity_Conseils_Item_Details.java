@@ -61,9 +61,9 @@ public class activity_Conseils_Item_Details extends Activity {
         List<DetailsConseils> listDetails = new ArrayList<DetailsConseils>();
         if (item.equals("Patins")) {
             listDetails = conseils.getAllDetailsConseils(1);
-        } else if (item.equals("Bâtons")){
+        } else if (item.equals("Bâtons")) {
             listDetails = conseils.getAllDetailsConseils(2);
-        } else {
+        } else if (item.equals("Protections")) {
             listDetails = conseils.getAllDetailsConseils(3);
         }
 
