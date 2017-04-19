@@ -42,7 +42,7 @@
             android:hint="•••••••" />
 
         <Button
-            android:text="Se conneceter"
+            android:text="Se connecter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btn_Connection"

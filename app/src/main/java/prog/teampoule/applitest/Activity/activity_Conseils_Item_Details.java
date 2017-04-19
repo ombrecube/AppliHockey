@@ -204,7 +204,7 @@ public class activity_Conseils_Item_Details extends Activity {
             viewTitreContenu7.setText(nom_details);
             viewContenu7.setText(contenu_details);
 
-            viewTitreContenu3.setOnClickListener(new OnClickListener() {
+            viewContenu7.setOnClickListener(new OnClickListener() {
                 public void onClick(View view) {
                     if (viewContenu7.getVisibility() == view.GONE) {
                         viewContenu7.setVisibility(view.VISIBLE);

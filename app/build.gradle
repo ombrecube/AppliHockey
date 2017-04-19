@@ -27,11 +27,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'com.android.support:design:25.1.0'
     compile 'com.google.android.gms:play-services-maps:10.0.1'
-<<<<<<< HEAD
     compile 'com.android.support:support-v4:25.1.0'
     compile 'com.android.support:recyclerview-v7:25.1.0'
     testCompile 'junit:junit:4.12'
-=======
     compile 'com.github.sundeepk:compact-calendar-view:2.0.1'
->>>>>>> e6478ed638b0246b2ea9faf4a524c28627fdaa58
 }

@@ -31,7 +31,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         String CREATE_TITRE_TABLE = "CREATE TABLE titreconseils ( " +
                 "id_titre INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "nom_titre TEXT );";
-        ScriptDB += CREATE_TITRE_TABLE;
+        //ScriptDB += CREATE_TITRE_TABLE;
 
         // SQL statement to create Details table
         String CREATE_DETAILS_TABLE = "CREATE TABLE detailsconseils ( " +
@@ -50,6 +50,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 "INSERT INTO titreconseils (nom_titre) VALUES (\"Bâtons\");"+
                 "INSERT INTO titreconseils (nom_titre) VALUES (\"Protections\");";
         ScriptDB += INSERT_TITRE_TABLE;
+
 
         String INSERT_DETAILS_TABLE_PATINS_1 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details) "+
                 "VALUES (1, \"Choisir correctement\", "+
@@ -98,9 +99,6 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 "\t\tSi vous le souhaitez, vous pouvez créer un pommeau avec le tape au bout de votre bâton pour empêcher votre main de glisser. "+
                 "Ensuite, pour avoir une meilleure prise, enroulez le tape sur une distance de quatre à six pouces (10-15cm) à partir de l'extrémité du bâton.\n" +
                 "\t\tAppliquez le tape sur la lame, du talon au bout, ou du bout au talon, selon votre préférence. " +
-<<<<<<< HEAD
-                "Recouvrez le tape déjà appliqué soigneusement et de façon constante aaaa.\")";
-=======
                 "Recouvrez le tape déjà appliqué soigneusement et de façon constante.\")";
         ScriptDB += " "+INSERT_DETAILS_TABLE_BATONS_2;
 
@@ -166,8 +164,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 "Ne faites jamais sécher l’équipement sur ou près d’une source directe de chaleur, car cela pourrait l’endommager."+
                 "\t\tUtilisez un support conçu à cet effet qui peut être rangé et installé facilement.\n"+
                 "\t\tPour le nettoyage, utilisez une eau légèrement savonneuse et une brosse douce.\")";
+
         ScriptDB += " "+INSERT_DETAILS_TABLE_PROTECTIONS_8;
->>>>>>> e6478ed638b0246b2ea9faf4a524c28627fdaa58
 
         db.execSQL(CREATE_TITRE_TABLE);
         db.execSQL(CREATE_DETAILS_TABLE);
@@ -185,6 +183,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         db.execSQL(INSERT_DETAILS_TABLE_PROTECTIONS_6);
         db.execSQL(INSERT_DETAILS_TABLE_PROTECTIONS_7);
         db.execSQL(INSERT_DETAILS_TABLE_PROTECTIONS_8);
+
+        Log.d("test",ScriptDB);
     }
 
     @Override
