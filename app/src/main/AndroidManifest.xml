@@ -26,21 +26,30 @@
         <activity
             android:name=".Activity.activity_Equipes"
             android:label="@string/title_activity__equipes"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Activity.activity_Calendrier"/>
-        <activity android:name=".Activity.activity_Conseils"/>
-        <activity android:name=".Activity.activity_Conseils_Item_Details"/>
-        <activity android:name=".Activity.activity_Default"/>
-        <activity android:name=".Activity.activity_MiniJeu"/>
-        <activity android:name=".Activity.activity_login"/>
-        <activity android:name=".Activity.activity_Friend"/>
-        <activity android:name=".Activity.activity_Allmessages"/>
-        <activity android:name=".Activity.activity_Message"/>
-        <activity android:name=".Activity.activity_OnePatinoire"/>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.activity_Calendrier" />
+        <activity android:name=".Activity.activity_Conseils" />
+        <activity android:name=".Activity.activity_Conseils_Item_Details" />
+        <activity android:name=".Activity.activity_Default" />
+        <activity android:name=".Activity.activity_MiniJeu" />
+        <activity android:name=".Activity.activity_login" />
+        <activity android:name=".Activity.activity_Friend" />
+        <activity android:name=".Activity.activity_Allmessages" />
+        <activity android:name=".Activity.activity_Message" />
+        <activity android:name=".Activity.activity_OnePatinoire" />
+        <activity android:name=".Activity.activity_Tutoriels" />
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/google_maps_key"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".Activity.activity_Event"
+            android:label="@string/title_activity_event"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

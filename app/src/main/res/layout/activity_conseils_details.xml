@@ -66,6 +66,81 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textContenu3"
                 android:visibility="gone" />
+
+            <TextView
+                android:text="Titre 4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/titreContenu4"
+                android:textSize="24sp"
+                android:padding="6dp" />
+
+            <TextView
+                android:text="Contenu 4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textContenu4"
+                android:visibility="gone" />
+
+            <TextView
+                android:text="Titre 5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/titreContenu5"
+                android:textSize="24sp"
+                android:padding="6dp" />
+
+            <TextView
+                android:text="Contenu 5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textContenu5"
+                android:visibility="gone" />
+
+            <TextView
+                android:text="Titre 6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/titreContenu6"
+                android:textSize="24sp"
+                android:padding="6dp" />
+
+            <TextView
+                android:text="Contenu 6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textContenu6"
+                android:visibility="gone" />
+
+            <TextView
+                android:text="Titre 7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/titreContenu7"
+                android:textSize="24sp"
+                android:padding="6dp" />
+
+            <TextView
+                android:text="Contenu 7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textContenu7"
+                android:visibility="gone" />
+
+            <TextView
+                android:text="Titre 8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/titreContenu8"
+                android:textSize="24sp"
+                android:padding="6dp" />
+
+            <TextView
+                android:text="Contenu 8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textContenu8"
+                android:visibility="gone" />
         </LinearLayout>
     </ScrollView>
 

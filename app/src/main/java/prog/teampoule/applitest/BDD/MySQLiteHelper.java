@@ -60,6 +60,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
         String INSERT_EVENT = "INSERT INTO evenements (nom_evenement, date_evenement) VALUES (\"Test event bdd\", \"1492315200000\");";
 
+        String INSERT_EVENT2 = "INSERT INTO evenements (nom_evenement, date_evenement) VALUES (\"Go Sags Go !!\", \"1492488000000\");";
+
         String INSERT_DETAILS_TABLE_PATINS_1 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details) "+
                 "VALUES (1, \"Choisir correctement\", "+
                 "\"\t\tPour la pointure appropriée, pensez à vous renseigner (sur internet ou auprès d'un vendeur), "+
@@ -108,6 +110,71 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 "Ensuite, pour avoir une meilleure prise, enroulez le tape sur une distance de quatre à six pouces (10-15cm) à partir de l'extrémité du bâton.\n" +
                 "\t\tAppliquez le tape sur la lame, du talon au bout, ou du bout au talon, selon votre préférence. " +
                 "Recouvrez le tape déjà appliqué soigneusement et de façon constante.\")";
+        ScriptDB += " "+INSERT_DETAILS_TABLE_BATONS_2;
+
+        String INSERT_DETAILS_TABLE_PROTECTIONS_1 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details) "+
+                "VALUES (3, \"Le casque\", "+
+                "\"\t\tLe port d'un casque au hockey est très important pour éviter des blessures à la tête ou aux yeux. "+
+                "Certains casques offrent divers degrés de protection suivant votre niveau de jeu (avec ou sans mise en échec). "+
+                "Il vous faut trouver le casque qui satisfait aux normes actuelles de sécurité, mais aussi qui vous va bien.\n"+
+                "\t\tLe casque doit être approuvé par différentes instances, soit le HECC (The Hockey Equipment Certification Council) ou le CSA (The Canadian Standards Association).\n" +
+                "\t\tLes casques ont également une date d'expiration recommandée. " +
+                "Selon le pays dans lequel vous vous trouvez, il vous faudra peut-être changer votre casque avant cette date d'expiration. "+
+                "Un casque endommagé doit être remplacé sans faute.\")";
+        ScriptDB += " "+INSERT_DETAILS_TABLE_PROTECTIONS_1;
+
+        String INSERT_DETAILS_TABLE_PROTECTIONS_2 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details) "+
+                "VALUES (3, \"Les gants\", "+
+                "\"\t\tLes gants doivent être suffisamment amples pour ne pas nuire aux mouvements de vos poignets. "+
+                "Penser à essayer plusieurs modèles de gants jusqu’à ce que vous en trouviez un qui soit confortable.\")";
+        ScriptDB += " "+INSERT_DETAILS_TABLE_PROTECTIONS_2;
+
+        String INSERT_DETAILS_TABLE_PROTECTIONS_3 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details) "+
+                "VALUES (3, \"Les protège-coudes\", "+
+                "\"\t\tLe haut du protège-coude doit joindre le bas de l’épaulière et le haut du gant. "+
+                "Il ne doit pas gêner votre mobilité.\n"+
+                "\t\tIl existe différentes grandeurs de protèges-coudes (petit, moyen, grand).\")";
+        ScriptDB += " "+INSERT_DETAILS_TABLE_PROTECTIONS_3;
+
+        String INSERT_DETAILS_TABLE_PROTECTIONS_4 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details) "+
+                "VALUES (3, \"Les épaulières\", "+
+                "\"\t\tLes épaulières doivent permettre une grande liberté de mouvement au joueur tout en offrant un maximum de protection. "+
+                "Elles ne doivent pas se soulever ou gêner votre mobilité.\n"+
+                "\t\tIl existe différents types d'épaulières suivant votre niveau de jeu.\")";
+        ScriptDB += " "+INSERT_DETAILS_TABLE_PROTECTIONS_4;
+
+        String INSERT_DETAILS_TABLE_PROTECTIONS_5 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details) "+
+                "VALUES (3, \"Les culottes (ou pantalon)\", "+
+                "\"\t\tVous pouvez choisir vos culottes en fonction de votre tour de taille, mais il faut aussi s'assurer qu'elles ne soient pas trop longues (ou trop courtes). "+
+                "Elles doivent tomber environ à mi-chemin de votre genou et recouvrir partiellement vos jambières.\")";
+        ScriptDB += " "+INSERT_DETAILS_TABLE_PROTECTIONS_5;
+
+        String INSERT_DETAILS_TABLE_PROTECTIONS_6 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details) "+
+                "VALUES (3, \"Les jambières\", "+
+                "\"\t\tVos jambières devraient vous couvrir des genoux aux chevilles. "+
+                "Elles doivent s’arrêter à plus ou moins deux doigts au-dessus de l’os de la cheville. "+
+                "Le genou doit se trouver au milieu de la coquille.\n"+
+                "\t\tDes jambières fissurées ou craquées doivent être remplacées immédiatement.\n"+
+                "\t\tMettez vos bas de hockey par-dessus vos jambières.\")";
+        ScriptDB += " "+INSERT_DETAILS_TABLE_PROTECTIONS_6;
+
+        String INSERT_DETAILS_TABLE_PROTECTIONS_7 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details) "+
+                "VALUES (3, \"Le protège-cou\", "+
+                "\"\t\tVous pouvez choisir un protège-cou traditionel (sans bavette) mais certaines parties du cou pourraient ne pas être protégées. "+
+                "Vous pouvez également choisir une protège-cou avec bavette qui est un peu plus sécuritaire.\n"+
+                "\t\tLe protège-cou doit avant tout être très confortable.\")";
+        ScriptDB += " "+INSERT_DETAILS_TABLE_PROTECTIONS_7;
+
+        String INSERT_DETAILS_TABLE_PROTECTIONS_8 = "INSERT INTO detailsconseils (id_titre, nom_details, contenu_details) "+
+                "VALUES (3, \"Autres conseils\", "+
+                "\"\t\tLorsque vous essayez votre équipement, essayez plusieurs pièces à la fois. "+
+                "Par exemple : essayez des gants et des épaulières avec des protège-coudes. "+
+                "L’ensemble des éléments doit assurer une protection complète.\n"+
+                "\t\tFaites sécher l’équipement à l’air libre après chaque usage. "+
+                "Ne faites jamais sécher l’équipement sur ou près d’une source directe de chaleur, car cela pourrait l’endommager."+
+                "\t\tUtilisez un support conçu à cet effet qui peut être rangé et installé facilement.\n"+
+                "\t\tPour le nettoyage, utilisez une eau légèrement savonneuse et une brosse douce.\")";
+        ScriptDB += " "+INSERT_DETAILS_TABLE_PROTECTIONS_8;
 
         db.execSQL(CREATE_TITRE_TABLE);
         db.execSQL(CREATE_DETAILS_TABLE);
@@ -119,7 +186,15 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         db.execSQL(INSERT_DETAILS_TABLE_BATONS_1);
         db.execSQL(INSERT_DETAILS_TABLE_BATONS_2);
         db.execSQL(INSERT_EVENT);
-
+        db.execSQL(INSERT_EVENT2);
+        db.execSQL(INSERT_DETAILS_TABLE_PROTECTIONS_1);
+        db.execSQL(INSERT_DETAILS_TABLE_PROTECTIONS_2);
+        db.execSQL(INSERT_DETAILS_TABLE_PROTECTIONS_3);
+        db.execSQL(INSERT_DETAILS_TABLE_PROTECTIONS_4);
+        db.execSQL(INSERT_DETAILS_TABLE_PROTECTIONS_5);
+        db.execSQL(INSERT_DETAILS_TABLE_PROTECTIONS_6);
+        db.execSQL(INSERT_DETAILS_TABLE_PROTECTIONS_7);
+        db.execSQL(INSERT_DETAILS_TABLE_PROTECTIONS_8);
     }
 
     @Override

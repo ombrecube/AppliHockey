@@ -5,4 +5,5 @@
     <string name="mapKey">AIzaSyAzbulsSVSmI0rjnSttUgLgi9LsHci6SA4</string>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAzbulsSVSmI0rjnSttUgLgi9LsHci6SA4</string>
     <string name="title_activity__equipes">activity_Equipes</string>
+    <string name="title_activity_event">Event</string>
 </resources>

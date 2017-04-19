@@ -39,8 +39,6 @@ public class activity_Equipes extends Menu {
 
         listJoueurs = melanger(listJoueurs);
 
-
-
         final int taille = listJoueurs.size();
         int nbJoueurs1 = 0;
         int nbJoueurs2 = 0;
@@ -60,7 +58,6 @@ public class activity_Equipes extends Menu {
             j = j +2;
         }
 
-
         String[] equipe1 = new String[nbJoueurs1];
         String[] equipe2 = new String[nbJoueurs2];
 
@@ -68,7 +65,6 @@ public class activity_Equipes extends Menu {
         int index=0;
         while(true)
         {
-            //if(listJoueurs.get(i) == "")
             if(i>=taille)
                 break;
             else {
@@ -82,7 +78,6 @@ public class activity_Equipes extends Menu {
             i = i +2;
             index++;
         }
-
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, equipe1);
         ListView list = (ListView)findViewById(R.id.lstEquipe1);
@@ -100,6 +95,5 @@ public class activity_Equipes extends Menu {
         Collections.shuffle(nouvelle);
         return nouvelle;
     }
-
 
 }

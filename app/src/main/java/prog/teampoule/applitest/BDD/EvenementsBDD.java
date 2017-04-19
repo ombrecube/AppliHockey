@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
 public class EvenementsBDD {
     private static final String TABLE_TITRE = "evenements";
     private static final String KEY_ID_EVENEMENT = "id_evenement";
@@ -38,8 +37,6 @@ public class EvenementsBDD {
                 event.setNom_evenement(cursor.getString(1));
                 event.setDate_evenement(cursor.getString(2));
 
-                Log.i("DetailsConseils", event.toString());
-
                 listEvents.add(event);
             } while (cursor.moveToNext());
         }
@@ -47,6 +44,14 @@ public class EvenementsBDD {
         Log.d("getAllEvents()", listEvents.toString());
 
         return listEvents;
+    }
+
+    public void createEvent(String nom, String date) {
+
+        SQLiteDatabase db = context.getWritableDatabase();
+        Log.d("avant req", "test");
+        String query = "INSERT INTO" + TABLE_TITRE + "(nom_evenement, date_evenement) VALUES (\""+nom+"\",\""+date+"\");";
+        Log.d("après req", "test2");
     }
 
     public void open(){

@@ -19,4 +19,25 @@
         app:compactCalendarMultiEventIndicatorColor="#fff"
         />
 
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblEvent"
+        android:visibility="invisible" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/descEvent"
+        android:visibility="invisible" />
+
+    <Button
+        android:text="Ajouter un événement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_ajout"
+        android:visibility="invisible" />
+
 </LinearLayout>
