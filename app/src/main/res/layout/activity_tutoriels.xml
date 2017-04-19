@@ -3,10 +3,12 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <VideoView
+    <TextView
+        android:text="Titre vidéo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/videoView"
-        android:layout_weight="1" />
+        android:id="@+id/titreVideo"
+        android:layout_weight="1"
+        android:textSize="30sp" />
 
 </LinearLayout>
