@@ -15,10 +15,6 @@ import prog.teampoule.applitest.classAdapter.AdapteurJoueur;
 import prog.teampoule.applitest.Utilities.Menu;
 import prog.teampoule.applitest.R;
 
-/**
- * Created by Julien on 23/02/2017.
- */
-
 public class activity_MatchAleatoire extends Menu {
 
     private ArrayList<String> listJou=  new ArrayList<String>();
@@ -60,9 +56,6 @@ public class activity_MatchAleatoire extends Menu {
             }
         });
 
-
-
-
     }
 
     private void LoadListView(){
@@ -70,6 +63,5 @@ public class activity_MatchAleatoire extends Menu {
         listJoueur.setAdapter(adpt);
         listJou = adpt.ListeJoueurs();
     }
-
 
 }
